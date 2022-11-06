@@ -10,9 +10,8 @@ body {
     position: absolute;
     background-color: #f2f4f5;
     width: 100%;
-    height: 10%;
+    height: 5%;
     box-shadow: -4px 1px 18px rgba(0.6166666746139526, 0.6166666746139526, 0.6166666746139526, 0.20);
-
 }
 .header-title{
     padding: 10px;
