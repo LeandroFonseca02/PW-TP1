@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+body{
+    font-family: "Poppins", sans-serif;
+}
+
 header {
     display: flex;
     justify-content: flex-end;
@@ -44,7 +48,7 @@ header {
 
 .cta {
     margin-left: 20px;
-    padding: 9px 25px;
+    padding: 9px 14px;
     background-color: #0C727D;
     border: none;
     border-radius: 50px;
@@ -137,4 +141,72 @@ header {
 .footer-col .social-links a:hover{
     color: #24262b;
     background-color: #7AC7CD;
+}
+
+.login-container{
+    background-color: #F2F4F5;
+    display: flex;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #24252a;
+    width: 462px;
+    height: 380px;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 10px 50px -12px #0C727D;
+}
+
+.login form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login input{
+    margin-top: 20px;
+    background-color: #32363f;
+    color: #F2F4F5;
+    border: none;
+    height: 45px;
+    outline: none;
+    border-radius: 8px;
+    padding-left: 10px;
+}
+
+.login img{
+    width: auto;
+    height: 45px;
+}
+
+.login input::placeholder{
+    color: #F2F4F5;
+    font-size: 14px;
+}
+
+.login form [type="submit"]{
+    display: block;
+    background-color: #7AC7CD;
+    color: #24262b;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login p{
+    padding-top: 10px;
+    color: #F2F4F5;
+}
+
+.login a{
+    color: #7AC7CD;
+    text-decoration: none;
+    margin-left: 10px;
 }
