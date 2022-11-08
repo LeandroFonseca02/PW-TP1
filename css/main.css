@@ -106,28 +106,6 @@ header {
     cursor: pointer;
 }
 
-@media screen and (max-height: 450px) {
-    .overlay a {
-        font-size: 20px;
-    }
-    .overlay .close {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .nav__links,
-    .cta {
-        display: none;
-    }
-    .menu {
-        display: initial;
-    }
-}
-
-
 .footer{
     background-color: #24252a;
     padding: 70px 0;
@@ -209,17 +187,4 @@ header {
 .footer-col .social-links a:hover{
     color: #24262b;
     background-color: #7AC7CD;
-}
-
-@media(max-width: 767px) {
-    .footer-col{
-        width: 50%;
-        margin-bottom: 30px;
-    }
-}
-
-@media(max-width: 574px) {
-    .footer-col{
-        width: 100%;
-    }
 }
