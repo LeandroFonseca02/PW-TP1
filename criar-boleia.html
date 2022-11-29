@@ -31,8 +31,6 @@
           Criar Boleia
         </h3>
         <div class="card-blocker"></div>
-
-        <form class="row g-3">
         <div class="col">
           <div class="d-flex align-content-center mt-4">
             <div class="me-5">
@@ -51,8 +49,11 @@
           </div>
 
         </div>
+
+        <form class="row g-3">
+
           <div class="col-md-6">
-            <label for="inputOrigem" class="form-label">Veículo</label>
+            <label for="inputVeiculo" class="form-label">Veículo</label>
             <input type="text" class="form-control input-shadow" placeholder="Veículo" id="inputVeiculo">
           </div>
           <div class="col-md-6">
@@ -92,7 +93,6 @@
 
       if(this.id === "destino-ismat"){
         origem.value = "";
-        console.log("w")
         destino.value = "ISMAT";
         destino.disabled = true;
         origem.disabled = false;
