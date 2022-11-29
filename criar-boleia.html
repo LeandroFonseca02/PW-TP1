@@ -17,12 +17,6 @@
 </head>
 <body>
 
-<!--        <select class="form-select" aria-label="Veículo">-->
-<!--          <option selected hidden>Veículo</option>-->
-<!--          <option value="1">Mercedes</option>-->
-<!--          <option value="2">Audi</option>-->
-<!--          <option value="3">BMW</option>-->
-<!--        </select>-->
 
   <div class="container">
     <div class="card mt-5 boleia-card-shadow">
@@ -47,14 +41,21 @@
               </div>
             </div>
           </div>
-
         </div>
 
         <form class="row g-3">
 
           <div class="col-md-6">
             <label for="inputVeiculo" class="form-label">Veículo</label>
-            <input type="text" class="form-control input-shadow" placeholder="Veículo" id="inputVeiculo">
+            <select class="form-select" aria-label="Veículo" id="inputVeiculo">
+              <option selected hidden>Veículo</option>
+              <option value="1">Mercedes</option>
+              <option value="2">Audi</option>
+              <option value="3">BMW</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+
           </div>
           <div class="col-md-6">
             <label for="inputOrigem" class="form-label">Origem</label>
