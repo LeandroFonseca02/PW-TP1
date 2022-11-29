@@ -17,27 +17,6 @@
 </head>
 <body>
 
-  <div class="container">
-    <div class="card mt-5">
-      <div class="card-body">
-        <h3 class="card-title">
-          Criar Boleia
-        </h3>
-        <div class="card-blocker"></div>
-        <div class="d-inline-flex align-middle align-items-center mb-4">
-
-          <h5>Queres ir para o ISMAT ?</h5>
-          <div id="selector" class="btn-group ms-5" data-toggle="buttons-radio">
-            <button name="boleia-location" class="btn btn-primary" id="destino-ismat">
-              <i class="fas fa-check-circle" style="font-size: 24px"></i>
-            </button>
-            <button name="boleia-location" class="btn btn-primary" id="origem-ismat">
-              <i class="fas fa-times-circle" style="font-size: 24px"></i>
-            </button>
-          </div>
-        </div>
-
-
 <!--        <select class="form-select" aria-label="Veículo">-->
 <!--          <option selected hidden>Veículo</option>-->
 <!--          <option value="1">Mercedes</option>-->
@@ -45,48 +24,59 @@
 <!--          <option value="3">BMW</option>-->
 <!--        </select>-->
 
+  <div class="container">
+    <div class="card mt-5 boleia-card-shadow">
+      <div class="card-body">
+        <h3 class="card-title">
+          Criar Boleia
+        </h3>
+        <div class="card-blocker"></div>
+
         <form class="row g-3">
+        <div class="col">
+          <div class="d-flex align-content-center mt-4">
+            <div class="me-5">
+              <h5>Queres ir para o ISMAT ?</h5>
+            </div>
+            <div>
+              <div id="selector" class="btn-group" data-toggle="buttons-radio">
+                <button name="boleia-location" class="btn btn-primary ismat" id="destino-ismat">
+                  <i class="fas fa-check-circle" style="font-size: 24px"></i>
+                </button>
+                <button name="boleia-location" class="btn btn-primary ismat" id="origem-ismat">
+                  <i class="fas fa-times-circle" style="font-size: 24px"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+          <div class="col-md-6">
+            <label for="inputOrigem" class="form-label">Veículo</label>
+            <input type="text" class="form-control input-shadow" placeholder="Veículo" id="inputVeiculo">
+          </div>
           <div class="col-md-6">
             <label for="inputOrigem" class="form-label">Origem</label>
-            <input type="text" class="form-control" placeholder="Origem" id="inputOrigem">
+            <input type="text" class="form-control input-shadow" placeholder="Origem" id="inputOrigem">
           </div>
           <div class="col-md-6">
             <label for="inputDestino" class="form-label">Destino</label>
-            <input type="text" class="form-control" placeholder="Destino" id="inputDestino">
+            <input type="text" class="form-control input-shadow" placeholder="Destino" id="inputDestino">
           </div>
           <div class="col-6">
             <label for="inputAddress" class="form-label">Data</label>
-            <input type="date " class="form-control" id="inputAddress" placeholder="00/00/0000">
+            <input type="date" class="form-control input-shadow" id="inputAddress" placeholder="00/00/0000">
           </div>
-          <div class="col-6 cs-form">
+          <div class="col-6">
             <label for="inputAddress2" class="form-label">Hora</label>
-            <input type="time" class="form-control" id="inputAddress2" placeholder="00:00">
+            <input type="time" class="form-control input-shadow" id="inputAddress2" placeholder="00:00">
           </div>
-          <div class="col-md-6">
-            <label for="inputCity" class="form-label">City</label>
-            <input type="text" class="form-control" id="inputCity">
+          <div>
+            <label for="inputAddress2" class="form-label">Descrição</label>
+            <textarea class="form-control input-shadow" style="height: 180px; resize: none" placeholder="Descrição"></textarea>
           </div>
-          <div class="col-md-4">
-            <label for="inputState" class="form-label">State</label>
-            <select id="inputState" class="form-select">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-          <div class="col-md-2">
-            <label for="inputZip" class="form-label">Zip</label>
-            <input type="text" class="form-control" id="inputZip">
-          </div>
-          <div class="col-12">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck">
-              <label class="form-check-label" for="gridCheck">
-                Check me out
-              </label>
-            </div>
-          </div>
-          <div class="col-12">
-            <button type="submit" class="btn btn-primary">Sign in</button>
+          <div class="col-12 d-grid mt-4">
+            <button type="button" class="btn-ismat">Criar</button>
           </div>
         </form>
       </div>
@@ -102,6 +92,7 @@
 
       if(this.id === "destino-ismat"){
         origem.value = "";
+        console.log("w")
         destino.value = "ISMAT";
         destino.disabled = true;
         origem.disabled = false;
