@@ -17,16 +17,15 @@
 </head>
 <body>
 
-
   <div class="container">
-    <div class="card mt-5 boleia-card-shadow">
+    <div class="card mt-5 boleia-card-shadow p-2">
       <div class="card-body">
         <h3 class="card-title">
           Criar Boleia
         </h3>
-        <div class="card-blocker"></div>
         <div class="col">
-          <div class="d-flex align-content-center mt-4">
+          <div class="card-blocker"></div>
+          <div class="d-inline-flex align-items-center mb-1">
             <div class="me-5">
               <h5>Queres ir para o ISMAT ?</h5>
             </div>
@@ -47,7 +46,7 @@
 
           <div class="col-md-6">
             <label for="inputVeiculo" class="form-label">Veículo</label>
-            <select class="form-select" aria-label="Veículo" id="inputVeiculo">
+            <select class="form-select input-shadow form-ismat" aria-label="Veículo" id="inputVeiculo">
               <option selected hidden>Veículo</option>
               <option value="1">Mercedes</option>
               <option value="2">Audi</option>
@@ -59,32 +58,31 @@
           </div>
           <div class="col-md-6">
             <label for="inputOrigem" class="form-label">Origem</label>
-            <input type="text" class="form-control input-shadow" placeholder="Origem" id="inputOrigem">
+            <input type="text" class="form-control input-shadow form-ismat" placeholder="Origem" id="inputOrigem">
           </div>
           <div class="col-md-6">
             <label for="inputDestino" class="form-label">Destino</label>
-            <input type="text" class="form-control input-shadow" placeholder="Destino" id="inputDestino">
+            <input type="text" class="form-control input-shadow form-ismat" placeholder="Destino" id="inputDestino">
           </div>
           <div class="col-6">
             <label for="inputAddress" class="form-label">Data</label>
-            <input type="date" class="form-control input-shadow" id="inputAddress" placeholder="00/00/0000">
+            <input type="date" class="form-control input-shadow form-ismat" id="inputAddress" placeholder="00/00/0000">
           </div>
           <div class="col-6">
             <label for="inputAddress2" class="form-label">Hora</label>
-            <input type="time" class="form-control input-shadow" id="inputAddress2" placeholder="00:00">
+            <input type="time" class="form-control input-shadow form-ismat" id="inputAddress2" placeholder="00:00">
           </div>
           <div>
             <label for="inputAddress2" class="form-label">Descrição</label>
-            <textarea class="form-control input-shadow" style="height: 180px; resize: none" placeholder="Descrição"></textarea>
+            <textarea class="form-control input-shadow form-ismat" style="height: 180px; resize: none" placeholder="Descrição"></textarea>
           </div>
           <div class="col-12 d-grid mt-4">
-            <button type="button" class="btn-ismat">Criar</button>
+            <button type="button" class="btn-ismat-large">Criar</button>
           </div>
         </form>
       </div>
     </div>
   </div>
-
   <script>
     $(document).on('click', '[name="boleia-location"]', function(e) {
       e.stopPropagation();

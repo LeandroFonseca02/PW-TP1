@@ -9,9 +9,6 @@
     padding: 0;
 }
 
-body {
-    font-family: "Poppins", sans-serif;
-}
 
 .boleia-header {
     font-weight: 700;
@@ -26,7 +23,6 @@ body {
 
 .input-shadow {
     background: #FFFFFF;
-    border: 0.5px solid #0C727D;
     box-shadow: -4px -1px 8px rgba(137, 137, 137, 0.25);
     border-radius: 9px;
 }
@@ -35,9 +31,7 @@ body {
     font-size: larger;
 }
 
-
-                                                       /* CSS */
-.btn-ismat {
+.btn-ismat-large {
    align-items: center;
    appearance: none;
    background-color: var(--ismat-dark);
@@ -68,16 +62,16 @@ body {
    font-size: 18px;
 }
 
-.btn-ismat:focus {
+.btn-ismat-large:focus {
     box-shadow: var(--ismat-dark) 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, var(--ismat-dark) 0 -3px 0 inset;
 }
 
-.btn-ismat:hover {
+.btn-ismat-large:hover {
     box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, var(--ismat-dark) 0 -3px 0 inset;
     transform: translateY(-2px);
 }
 
-.btn-ismat:active {
+.btn-ismat-large:active {
     box-shadow: rgba(0,0,0,0.6) 0 3px 7px inset;
     transform: translateY(2px);
 }
@@ -109,5 +103,31 @@ body {
 }
 
 .ismat{
-  background-color: #0C727D!important;
+    --bs-btn-bg: var(--ismat-ligth)!important;
+    --bs-btn-border-color: #5eb2b9!important;
+    --bs-btn-hover-bg: #38949d!important;
+    --bs-btn-hover-border-color: var(--ismat-dark)!important;
+    --bs-btn-active-bg: var(--ismat-dark)!important;
+    --bs-btn-active-border-color: var(--ismat-dark)!important;
+}
+
+.form-ismat{
+    border-color: #0C727D !important;
+}
+
+.link-password{
+    text-decoration: none;
+    color: #757575!important;;
+}
+
+.btn-ismat-outline{
+    --bs-btn-bg: transparent!important;
+    --bs-btn-color: var(--ismat-dark)!important;
+    --bs-btn-border-color: #5eb2b9!important;
+    --bs-btn-hover-bg: #38949d!important;
+    --bs-btn-hover-color: white;
+    --bs-btn-hover-border-color: var(--ismat-dark)!important;
+    --bs-btn-active-bg: var(--ismat-dark)!important;
+    --bs-btn-active-color: white;
+    --bs-btn-active-border-color: var(--ismat-dark)!important;
 }
