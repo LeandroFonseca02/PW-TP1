@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-          crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
 
 </head>
 <body>
-<div class="container fullscreen d-inline-flex align-items-center justify-content-center">
-  <div>
-    <div class="card boleia-card-shadow m-auto col-xxl-6 col-xl-7 col-lg-8 col-md-9 col-sm-10">
-      <div class="card-body">
-        <h3 class="card-title">
-          Criar Boleia
-        </h3>
+<button type="button" class="btn-ismat-large" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Criar Boleia
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Criar Boleia</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
         <div class="col">
-          <div class="card-blocker"></div>
           <div class="d-inline-flex align-items-center mb-1">
             <div class="me-4">
               <h5>Queres ir para o ISMAT ?</h5>
             </div>
-            <div>
+            <div class="pb-2">
               <div id="selector" class="btn-group" data-toggle="buttons-radio">
                 <button name="boleia-location" class="btn btn-primary ismat" id="destino-ismat">
                   <i class="fas fa-check-circle" style="font-size: 24px"></i>
@@ -75,38 +77,41 @@
             <label for="inputAddress2" class="form-label">Descrição</label>
             <textarea class="form-control input-shadow form-ismat" style="height: 180px; resize: none" placeholder="Descrição"></textarea>
           </div>
-          <div class="col-12 d-grid mt-4">
+          <div class="col-12 d-grid">
             <button type="button" class="btn-ismat-large">Criar</button>
           </div>
         </form>
       </div>
     </div>
+
   </div>
 </div>
-  <script>
-    $(document).on('click', '[name="boleia-location"]', function(e) {
-      e.stopPropagation();
-      let destino = document.getElementById("inputDestino");
-      let origem = document.getElementById("inputOrigem");
 
 
-      if(this.id === "destino-ismat"){
-        origem.value = "";
-        destino.value = "ISMAT";
-        destino.disabled = true;
-        origem.disabled = false;
-      }else {
-        destino.value= "";
-        origem.value = "ISMAT";
-        origem.disabled = true;
-        destino.disabled = false;
-      }
+<script>
+  $(document).on('click', '[name="boleia-location"]', function(e) {
+    e.stopPropagation();
+    let destino = document.getElementById("inputDestino");
+    let origem = document.getElementById("inputOrigem");
 
-      // add class active to current button and remove it from the siblings
-      $(this).toggleClass('active')
-              .siblings().not(this).removeClass('active');
-    })
-  </script>
+
+    if(this.id === "destino-ismat"){
+      origem.value = "";
+      destino.value = "ISMAT";
+      destino.disabled = true;
+      origem.disabled = false;
+    }else {
+      destino.value= "";
+      origem.value = "ISMAT";
+      origem.disabled = true;
+      destino.disabled = false;
+    }
+
+    // add class active to current button and remove it from the siblings
+    $(this).toggleClass('active')
+            .siblings().not(this).removeClass('active');
+  })
+</script>
 
 
 </body>
