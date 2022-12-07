@@ -21,53 +21,56 @@
 <!--          <option value="3">BMW</option>-->
 <!--        </select>-->
 
-<div class="container">
-  <div class="card mt-5 boleia-card-shadow">
-    <div class="card-body">
-      <h3 class="card-title">
-        Pesquisar Boleia
-      </h3>
-      <div class="card-blocker"></div>
-      <div class="col">
-        <div class="d-inline-flex align-items-center mb-1">
-          <div class="me-5">
-            <h5>Queres ir para o ISMAT ?</h5>
-          </div>
-          <div class="pb-2">
-            <div id="selector" class="btn-group" data-toggle="buttons-radio">
-              <button name="boleia-location" class="btn btn-primary ismat" id="destino-ismat">
-                <i class="fas fa-check-circle" style="font-size: 24px"></i>
-              </button>
-              <button name="boleia-location" class="btn btn-primary ismat" id="origem-ismat">
-                <i class="fas fa-times-circle" style="font-size: 24px"></i>
-              </button>
+<div class="container fullscreen d-inline-flex align-items-center justify-content-center">
+  <div>
+    <div class="card mt-5 boleia-card-shadow m-auto col-xxl-8 col-xl-9 col-lg-10 col-md-11 col-sm-12">
+      <div class="card-body">
+        <h3 class="card-title">
+          Pesquisar Boleia
+        </h3>
+        <div class="card-blocker"></div>
+        <div class="col">
+          <div class="d-inline-flex align-items-center mb-1">
+            <div class="me-5">
+              <h5>Queres ir para o ISMAT ?</h5>
+            </div>
+            <div class="pb-2">
+              <div id="selector" class="btn-group" data-toggle="buttons-radio">
+                <button name="boleia-location" class="btn btn-primary ismat" id="destino-ismat">
+                  <i class="fas fa-check-circle" style="font-size: 24px"></i>
+                </button>
+                <button name="boleia-location" class="btn btn-primary ismat" id="origem-ismat">
+                  <i class="fas fa-times-circle" style="font-size: 24px"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
+        <form class="row g-3">
+          <div class="col-6">
+            <label for="inputOrigem" class="form-label">Origem</label>
+            <input type="text" class="form-control input-shadow form-ismat" placeholder="Origem" id="inputOrigem">
+          </div>
+          <div class="col-6">
+            <label for="inputDestino" class="form-label">Destino</label>
+            <input type="text" class="form-control input-shadow form-ismat" placeholder="Destino" id="inputDestino">
+          </div>
+          <div class="col-6">
+            <label for="inputAddress" class="form-label">Data</label>
+            <input type="date" class="form-control input-shadow form-ismat" id="inputAddress" placeholder="00/00/0000">
+          </div>
+          <div class="col-6">
+            <label for="inputAddress2" class="form-label">Hora</label>
+            <input type="time" class="form-control input-shadow form-ismat" id="inputAddress2" placeholder="00:00">
+          </div>
+          <div class="col-12 d-grid mt-4">
+            <button type="button" class="btn-ismat-large">Pesquisar</button>
+          </div>
+        </form>
       </div>
-      <form class="row g-3">
-        <div class="col-md-6">
-          <label for="inputOrigem" class="form-label">Origem</label>
-          <input type="text" class="form-control input-shadow form-ismat" placeholder="Origem" id="inputOrigem">
-        </div>
-        <div class="col-md-6">
-          <label for="inputDestino" class="form-label">Destino</label>
-          <input type="text" class="form-control input-shadow form-ismat" placeholder="Destino" id="inputDestino">
-        </div>
-        <div class="col-6">
-          <label for="inputAddress" class="form-label">Data</label>
-          <input type="date" class="form-control input-shadow form-ismat" id="inputAddress" placeholder="00/00/0000">
-        </div>
-        <div class="col-6">
-          <label for="inputAddress2" class="form-label">Hora</label>
-          <input type="time" class="form-control input-shadow form-ismat" id="inputAddress2" placeholder="00:00">
-        </div>
-        <div class="col-12 d-grid mt-4">
-          <button type="button" class="btn-ismat-large">Pesquisar</button>
-        </div>
-      </form>
     </div>
   </div>
+
 </div>
 
 <script>

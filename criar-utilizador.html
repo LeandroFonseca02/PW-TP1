@@ -12,43 +12,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
 </head>
 <body>
-<div class="d-flex flex-column min-vh-100 min-vw-100 align-content-center justify-content-center">
+
+<div class="container d-inline-flex align-items-center justify-content-center fullscreen">
     <div>
-        <div class="mt-3 m-auto col-lg-6 col-xl-4 col-md-8 col-sm-10">
+        <div class="m-auto col-xxl-6 col-xl-7 col-md-9 col-lg-8 col-sm-12">
             <div class="card boleia-card-shadow  col align-self-center">
                 <div class="card-body text-center">
                     <img src="images/logo-black.svg" class="mt-3" alt="logo" style="height: 40px; width: auto;">
                     <div>
-                        <div class="mx-5 mb-4">
+                        <div class="mx-5">
                             <p class="text-start mt-3">Preencha os campos</p>
-                            <form action="">
-                                <div class="floating-label mb-3 input-shadow">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder=" ">
-                                    <label for="floatingInput">Endereço de email</label>
+                            <form class="row d-inline-flex text-start" action="">
+                                <div class="col-8 mb-3">
+                                    <!--                                        <label for="floatingInput">Endereço de email</label>-->
+                                    <input type="email" class="form-control input-shadow form-ismat" id="floatingInput" placeholder="Email">
                                 </div>
-                                <div class="floating-label mb-3 input-shadow">
-                                    <input type="text" class="form-control" id="floatingFirstName" placeholder=" ">
-                                    <label for="floatingFirstName">Nome Próprio</label>
+                                <div class="col-4 mb-3">
+                                    <!--                                        <label for="floatingPhoneNumber">Telemóvel</label>-->
+                                    <input type="text" class="form-control input-shadow form-ismat" id="floatingPhoneNumber" placeholder="Telemóvel">
                                 </div>
-                                <div class="floating-label mb-3 input-shadow">
-                                    <input type="text" class="form-control" id="floatinglastName" placeholder=" ">
-                                    <label for="floatinglastName">Apelido</label>
+                                <div class="col-6 mb-3">
+                                    <!--                                        <label for="floatingFirstName">Nome Próprio</label>-->
+                                    <input type="text" class="form-control input-shadow form-ismat" id="floatingFirstName" placeholder="Nome Próprio">
                                 </div>
-                                <div class="floating-label mb-3 input-shadow">
-                                    <input type="text" class="form-control" id="floatingPhoneNumber" placeholder=" ">
-                                    <label for="floatingPhoneNumber">Número de telémovel</label>
+                                <div class="col-6 mb-3">
+                                    <!--                                        <label for="floatinglastName">Apelido</label>-->
+                                    <input type="text" class="form-control input-shadow form-ismat" id="floatinglastName" placeholder="Apelido">
                                 </div>
-<!--                                <div class="mb-3">-->
-<!--                                    <label for="formFile" class="form-label tet"></label>-->
-<!--                                    <input class="form-control" type="file" id="formFile" accept="image/x-png,image/gif,image/jpeg">-->
-<!--                                </div>-->
-                                <div class="floating-label mb-3 input-shadow">
-                                    <input type="password" class="form-control" id="floatingPassword" placeholder=" ">
-                                    <label for="floatingPassword">Palavra chave</label>
+                                <div class="col-6 mb-3">
+                                    <!--                                        <label for="floatingPassword">Palavra chave</label>-->
+                                    <input type="password" class="form-control input-shadow ismat form-ismat" id="floatingPassword" placeholder="Password">
                                 </div>
-                                <div class="floating-label mb-3 input-shadow">
-                                    <input type="password" class="form-control" id="floatingConfirmPassword" placeholder=" ">
-                                    <label for="floatingConfirmPassword">Confirme a Palavra chave</label>
+                                <div class="col-6 mb-3">
+                                    <!--                                        <label for="floatingConfirmPassword">Confirme a Palavra chave</label>-->
+                                    <input type="password" class="form-control input-shadow form-ismat" id="floatingConfirmPassword" placeholder="Confirme a Password">
                                 </div>
                                 <button type="button" class="btn-ismat-large col-12">Registar</button>
                             </form>

@@ -16,9 +16,9 @@
 
 </head>
 <body>
-
-  <div class="container">
-    <div class="card mt-5 boleia-card-shadow p-2">
+<div class="container fullscreen d-inline-flex align-items-center justify-content-center">
+  <div>
+    <div class="card boleia-card-shadow m-auto col-xxl-6 col-xl-7 col-lg-8 col-md-9 col-sm-10">
       <div class="card-body">
         <h3 class="card-title">
           Criar Boleia
@@ -26,7 +26,7 @@
         <div class="col">
           <div class="card-blocker"></div>
           <div class="d-inline-flex align-items-center mb-1">
-            <div class="me-5">
+            <div class="me-4">
               <h5>Queres ir para o ISMAT ?</h5>
             </div>
             <div>
@@ -43,7 +43,6 @@
         </div>
 
         <form class="row g-3">
-
           <div class="col-md-6">
             <label for="inputVeiculo" class="form-label">Veículo</label>
             <select class="form-select input-shadow form-ismat" aria-label="Veículo" id="inputVeiculo">
@@ -83,6 +82,7 @@
       </div>
     </div>
   </div>
+</div>
   <script>
     $(document).on('click', '[name="boleia-location"]', function(e) {
       e.stopPropagation();
