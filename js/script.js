@@ -8,7 +8,6 @@ function createStar(div,score){
         star = "star-fill";
     }
     let img = document.createElement("img");
-    img.className = "mb-2";
     img.src="./images/icons/" + star + ".svg";
     img.alt=star;
     img.style.height = "28px";
@@ -35,7 +34,6 @@ function getStarScore(rating){
 
 function starRatingGenerator(element,rating){
     let div = document.createElement('div');
-    div.className = "ms-5";
     element.appendChild(div)
     let array = getStarScore(rating);
     for (let i = 0; i < 5; i++) {
