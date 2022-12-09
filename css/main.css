@@ -151,3 +151,43 @@
     left:0%;
     top:0%;
 }
+
+.rating-wrapper {
+    align-self: center;
+    display: inline-flex;
+    direction: rtl !important;
+    padding: 1.5rem 2.5rem;
+    margin-left: auto;
+}
+
+
+.rating-wrapper > label {
+    color: #E1E6F6;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 3rem;
+    padding: 1rem .6rem;
+    transition: color 0.5s;
+}
+
+
+.rating-wrapper > input {
+    height: 100%;
+    width: 100%;
+}
+
+.rating-wrapper > input {
+    display: none;
+}
+
+.rating-wrapper > label:hover,
+.rating-wrapper > label:hover ~ label,
+.rating-wrapper>input:checked ~ label  {
+    color: #ffcc33;
+}
+
+.rating-wrapper > label:hover,
+.rating-wrapper > label:hover ~ label,
+.rating-wrapper>input:checked ~ label  {
+    color: #ffcc33;
+}
