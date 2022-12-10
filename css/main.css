@@ -111,7 +111,7 @@ body{
 }
 
 .card-blocker{
-    height: 40px;
+    height: 20px;
 }
 
 .ismat{
@@ -211,11 +211,12 @@ body{
 #showMore {
     display: inline-flex;
     text-align: center;
+    text-decoration: none;
+    color: black;
 }
 
 .noContent {
-    color: #fafafa !important;
-    background-color: #000 !important;
+    color: #858585 !important;
     pointer-events: none;
 }
 
@@ -252,7 +253,7 @@ body{
 }
 
 .boleia-card{
-    --bs-card-spacer-y: 0.6rem !important;
+    --bs-card-spacer-y: 0.1rem !important;
     border-radius: 1rem !important;
 }
 
