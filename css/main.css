@@ -223,3 +223,22 @@
 #uploadProfilePic{
     display: none;
 }
+
+.card-profile-image{
+    height: 80px;
+    z-index: 1;
+}
+
+.condutor-icon{
+    position: relative;
+    top: 23px;
+    right: 40px;
+    height: 32px;
+    z-index: 2;
+    box-shadow: -4px -1px 8px rgba(137, 137, 137, 0.5);
+}
+
+.profile-image{
+    height: 128px;
+    width: 128px;
+}
