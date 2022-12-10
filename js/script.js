@@ -43,7 +43,8 @@ function starRatingGenerator(element,rating){
 }
 
 function changeExpandIcon(element) {
-    element.src = (element.src.includes('icon-down.svg')) ? './images/icons/icon-up.svg' : './images/icons/icon-down.svg';
+    let img = element.querySelector("img");
+    img.src = (img.src.includes('icon-down.svg')) ? './images/icons/icon-up.svg' : './images/icons/icon-down.svg';
 }
 
 function debugStarRating(){
