@@ -210,3 +210,16 @@
     background-color: #000 !important;
     pointer-events: none;
 }
+
+.label-input-file{
+    color: #0C727D;
+    cursor: pointer;
+}
+
+.label-input-file:hover{
+    text-decoration: underline;
+}
+
+#uploadProfilePic{
+    display: none;
+}
