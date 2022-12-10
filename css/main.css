@@ -208,9 +208,10 @@ body{
     display: none;
 }
 
-#showMore {
-    display: inline-flex;
-    text-align: center;
+.show-more {
+    width: 100%;
+    border: none;
+    background-color: inherit;
     text-decoration: none;
     color: black;
 }
