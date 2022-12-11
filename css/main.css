@@ -177,8 +177,7 @@ body{
     color: #E1E6F6;
     cursor: pointer;
     display: inline-flex;
-    font-size: 3rem;
-    padding: 1rem .6rem;
+    font-size: 28px;
     transition: color 0.5s;
 }
 
