@@ -145,7 +145,6 @@
                                                         <img class="mb-2" src="./images/icons/star.svg" alt="Star"
                                                              style="height: 28px;">
                                                     </td>
-                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
@@ -254,8 +253,7 @@
                                                         <img class="mb-2" src="./images/icons/star.svg" alt="Star"
                                                              style="height: 28px;">
                                                     </td>
-                                                    </td>
-                                                </tr>
+
                                                 <tr>
                                                     <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
                                                              alt="Profile Image"></td>
@@ -362,7 +360,6 @@
                                                              style="height: 28px;">
                                                         <img class="mb-2" src="./images/icons/star.svg" alt="Star"
                                                              style="height: 28px;">
-                                                    </td>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -472,7 +469,6 @@
                                                         <img class="mb-2" src="./images/icons/star.svg" alt="Star"
                                                              style="height: 28px;">
                                                     </td>
-                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
@@ -580,7 +576,6 @@
                                                              style="height: 28px;">
                                                         <img class="mb-2" src="./images/icons/star.svg" alt="Star"
                                                              style="height: 28px;">
-                                                    </td>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -690,7 +685,6 @@
                                                         <img class="mb-2" src="./images/icons/star.svg" alt="Star"
                                                              style="height: 28px;">
                                                     </td>
-                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
@@ -798,7 +792,6 @@
                                                              style="height: 28px;">
                                                         <img class="mb-2" src="./images/icons/star.svg" alt="Star"
                                                              style="height: 28px;">
-                                                    </td>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -908,7 +901,6 @@
                                                         <img class="mb-2" src="./images/icons/star.svg" alt="Star"
                                                              style="height: 28px;">
                                                     </td>
-                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
@@ -1017,7 +1009,6 @@
                                                         <img class="mb-2" src="./images/icons/star.svg" alt="Star"
                                                              style="height: 28px;">
                                                     </td>
-                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
@@ -1075,7 +1066,6 @@
 
     </div>
 
-</div>
 
 
 
@@ -1099,11 +1089,11 @@
 </div>
 
 <!-- Modal Pesquisar Boleia-->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalPesquisarLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Pesquisar Boleia</h5>
+                <h5 class="modal-title" id="modalPesquisarLabel">Pesquisar Boleia</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -1113,11 +1103,11 @@
                             <h5>Queres ir para o ISMAT ?</h5>
                         </div>
                         <div class="pb-2">
-                            <div id="selector" class="btn-group" data-toggle="buttons-radio">
-                                <button name="boleia-location" class="btn btn-primary ismat" id="destino-ismat">
+                            <div id="selectorPesquisar" class="btn-group" data-toggle="buttons-radio">
+                                <button name="criarDestinoIsmat" class="btn btn-primary ismat inputDestino" onclick="changeInputs(this)">
                                     <i class="fas fa-check-circle" style="font-size: 24px"></i>
                                 </button>
-                                <button name="boleia-location" class="btn btn-primary ismat" id="origem-ismat">
+                                <button name="criarOrigemIsmat" class="btn btn-primary ismat inputOrigem" onclick="changeInputs(this)">
                                     <i class="fas fa-times-circle" style="font-size: 24px"></i>
                                 </button>
                             </div>
@@ -1126,20 +1116,20 @@
                 </div>
                 <form class="row g-3">
                     <div class="col-6">
-                        <label for="inputOrigem" class="form-label">Origem</label>
-                        <input type="text" class="form-control input-shadow form-ismat" placeholder="Origem" id="inputOrigem">
+                        <label for="inputPesquisarOrigem" class="form-label">Origem</label>
+                        <input type="text" class="form-control input-shadow form-ismat inputOrigem" name="inputOrigem" placeholder="Origem" id="inputPesquisarOrigem">
                     </div>
                     <div class="col-6">
-                        <label for="inputDestino" class="form-label">Destino</label>
-                        <input type="text" class="form-control input-shadow form-ismat" placeholder="Destino" id="inputDestino">
+                        <label for="inputPesquisarDestino" class="form-label">Destino</label>
+                        <input type="text" class="form-control input-shadow form-ismat inputDestino" name="inputDestino" placeholder="Destino"  id="inputPesquisarDestino">
                     </div>
                     <div class="col-6">
-                        <label for="inputAddress" class="form-label">Data</label>
-                        <input type="date" class="form-control input-shadow form-ismat" id="inputAddress" placeholder="00/00/0000">
+                        <label for="inputPesquisarData" class="form-label">Data</label>
+                        <input type="date" class="form-control input-shadow form-ismat" name="inputData" placeholder="00/00/0000"  id="inputPesquisarData">
                     </div>
                     <div class="col-6">
-                        <label for="inputAddress2" class="form-label">Hora</label>
-                        <input type="time" class="form-control input-shadow form-ismat" id="inputAddress2" placeholder="00:00">
+                        <label for="inputPesquisarHora" class="form-label">Hora</label>
+                        <input type="time" class="form-control input-shadow form-ismat" name="inputHora" placeholder="00:00"  id="inputPesquisarHora">
                     </div>
                     <div class="col-12 d-grid mt-4">
                         <button type="button" class="btn-ismat-large">Pesquisar</button>
@@ -1166,10 +1156,10 @@
                         </div>
                         <div class="pb-2">
                             <div id="selector" class="btn-group" data-toggle="buttons-radio">
-                                <button name="boleia-location" class="btn btn-primary ismat" id="destino-ismat">
+                                <button name="boleia-location" class="btn btn-primary ismat inputDestino" id="destino-ismat" onclick="changeInputs(this)">
                                     <i class="fas fa-check-circle" style="font-size: 24px"></i>
                                 </button>
-                                <button name="boleia-location" class="btn btn-primary ismat" id="origem-ismat">
+                                <button name="boleia-location" class="btn btn-primary ismat inputOrigem" id="origem-ismat" onclick="changeInputs(this)">
                                     <i class="fas fa-times-circle" style="font-size: 24px"></i>
                                 </button>
                             </div>
@@ -1188,28 +1178,28 @@
                         </select>
                     </div>
                     <div class="col-md-6">
-                        <label for="inputOrigem" class="form-label">Lugares Disponíveis</label>
-                        <input type="text" class="form-control input-shadow form-ismat" placeholder="Lugares Disponíveis" id="inputLugaresDisponiveis">
+                        <label for="inputCriarLugaresDisponiveis" class="form-label">Lugares Disponíveis</label>
+                        <input type="text" class="form-control input-shadow form-ismat" placeholder="Lugares Disponíveis" id="inputCriarLugaresDisponiveis">
                     </div>
                     <div class="col-md-6">
-                        <label for="inputOrigem" class="form-label">Origem</label>
-                        <input type="text" class="form-control input-shadow form-ismat" placeholder="Origem" id="inputOrigem">
+                        <label for="inputCriarOrigem" class="form-label">Origem</label>
+                        <input type="text" class="form-control input-shadow form-ismat inputOrigem" placeholder="Origem" id="inputCriarOrigem">
                     </div>
                     <div class="col-md-6">
-                        <label for="inputDestino" class="form-label">Destino</label>
-                        <input type="text" class="form-control input-shadow form-ismat" placeholder="Destino" id="inputDestino">
+                        <label for="inputCriarDestino" class="form-label">Destino</label>
+                        <input type="text" class="form-control input-shadow form-ismat inputDestino" placeholder="Destino" id="inputCriarDestino">
                     </div>
                     <div class="col-6">
-                        <label for="inputAddress" class="form-label">Data</label>
-                        <input type="date" class="form-control input-shadow form-ismat" id="inputAddress" placeholder="00/00/0000">
+                        <label for="inputCriarData" class="form-label">Data</label>
+                        <input type="date" class="form-control input-shadow form-ismat" id="inputCriarData" placeholder="00/00/0000">
                     </div>
                     <div class="col-6">
-                        <label for="inputAddress2" class="form-label">Hora</label>
-                        <input type="time" class="form-control input-shadow form-ismat" id="inputAddress2" placeholder="00:00">
+                        <label for="inputCriarHora" class="form-label">Hora</label>
+                        <input type="time" class="form-control input-shadow form-ismat" id="inputCriarHora" placeholder="00:00">
                     </div>
                     <div>
-                        <label for="inputAddress2" class="form-label">Descrição</label>
-                        <textarea class="form-control input-shadow form-ismat" style="height: 180px; resize: none" placeholder="Descrição"></textarea>
+                        <label for="inputCriarDescricao" class="form-label">Descrição</label>
+                        <textarea class="form-control input-shadow form-ismat" style="height: 180px; resize: none" placeholder="Descrição" id="inputCriarDescricao"></textarea>
                     </div>
                     <div class="col-12 d-grid">
                         <button type="button" class="btn-ismat-large">Criar</button>

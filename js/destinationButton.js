@@ -1,22 +1,18 @@
-$(document).on('click', '[name="boleia-location"]', function(e) {
-    e.stopPropagation();
-    let destino = document.getElementById("inputDestino");
-    let origem = document.getElementById("inputOrigem");
-
-
-    if(this.id === "destino-ismat"){
+function changeInputs(button){
+    let form = button.parentNode.parentNode.parentNode.parentNode.parentNode.querySelector("form");
+    let origem = form.querySelector(".inputOrigem");
+    let destino = form.querySelector(".inputDestino");
+    if(button.classList.contains("inputDestino")){
         origem.value = "";
         destino.value = "ISMAT";
         destino.disabled = true;
         origem.disabled = false;
-    }else {
+    }else{
         destino.value= "";
         origem.value = "ISMAT";
         origem.disabled = true;
         destino.disabled = false;
     }
-
-    // add class active to current button and remove it from the siblings
-    $(this).toggleClass('active')
+    $(button).toggleClass('active')
         .siblings().not(this).removeClass('active');
-})
+}
