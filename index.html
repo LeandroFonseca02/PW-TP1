@@ -12,7 +12,7 @@
 <header class="p-3 mb-3 border-bottom header-nav header-ismat sticky-top">
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start navbar navbar-expand-lg">
-            <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none pe-4">
+            <a href="./index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none pe-4">
                 <img src="images/logo-black.svg" alt="logo" style="height: 32px; width: auto;">
             </a>
 
@@ -45,7 +45,7 @@
                         <img src="./images/icons/user-icon.svg" alt="mdo" class="rounded-circle" width="32" height="32">
                     </a>
                     <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                        <li><a class="dropdown-item" href="#">Ver Perfil</a></li>
+                        <li><a class="dropdown-item" href="./perfil.html">Ver Perfil</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -64,6 +64,16 @@
 
         <div class="card flex-column d-flex justify-content-center align-items-center" style="width: 85%;">
             <div class="card-blocker"></div>
+            <div>
+                <button type="button" class="btn-ismat-large" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Pesquisar Boleia
+                </button>
+            </div>
+            <div>
+                <button type="button" class="btn-ismat-large" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                    Criar Boleia
+                </button>
+            </div>
             <div>
                 <h5>Lista de boleias</h5>
             </div>
@@ -1088,9 +1098,134 @@
     </footer>
 </div>
 
+<!-- Modal Pesquisar Boleia-->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Pesquisar Boleia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="col">
+                    <div class="d-inline-flex align-items-center mb-1">
+                        <div class="me-5">
+                            <h5>Queres ir para o ISMAT ?</h5>
+                        </div>
+                        <div class="pb-2">
+                            <div id="selector" class="btn-group" data-toggle="buttons-radio">
+                                <button name="boleia-location" class="btn btn-primary ismat" id="destino-ismat">
+                                    <i class="fas fa-check-circle" style="font-size: 24px"></i>
+                                </button>
+                                <button name="boleia-location" class="btn btn-primary ismat" id="origem-ismat">
+                                    <i class="fas fa-times-circle" style="font-size: 24px"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="row g-3">
+                    <div class="col-6">
+                        <label for="inputOrigem" class="form-label">Origem</label>
+                        <input type="text" class="form-control input-shadow form-ismat" placeholder="Origem" id="inputOrigem">
+                    </div>
+                    <div class="col-6">
+                        <label for="inputDestino" class="form-label">Destino</label>
+                        <input type="text" class="form-control input-shadow form-ismat" placeholder="Destino" id="inputDestino">
+                    </div>
+                    <div class="col-6">
+                        <label for="inputAddress" class="form-label">Data</label>
+                        <input type="date" class="form-control input-shadow form-ismat" id="inputAddress" placeholder="00/00/0000">
+                    </div>
+                    <div class="col-6">
+                        <label for="inputAddress2" class="form-label">Hora</label>
+                        <input type="time" class="form-control input-shadow form-ismat" id="inputAddress2" placeholder="00:00">
+                    </div>
+                    <div class="col-12 d-grid mt-4">
+                        <button type="button" class="btn-ismat-large">Pesquisar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Criar Boleia-->
+<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Criar Boleia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="col">
+                    <div class="d-inline-flex align-items-center mb-1">
+                        <div class="me-4">
+                            <h5>Queres ir para o ISMAT ?</h5>
+                        </div>
+                        <div class="pb-2">
+                            <div id="selector" class="btn-group" data-toggle="buttons-radio">
+                                <button name="boleia-location" class="btn btn-primary ismat" id="destino-ismat">
+                                    <i class="fas fa-check-circle" style="font-size: 24px"></i>
+                                </button>
+                                <button name="boleia-location" class="btn btn-primary ismat" id="origem-ismat">
+                                    <i class="fas fa-times-circle" style="font-size: 24px"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="inputVeiculo" class="form-label">Veículo</label>
+                        <select class="form-select input-shadow form-ismat" aria-label="Veículo" id="inputVeiculo">
+                            <option selected hidden>Veículo</option>
+                            <option value="1">Mercedes</option>
+                            <option value="2">Audi</option>
+                            <option value="3">BMW</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputOrigem" class="form-label">Lugares Disponíveis</label>
+                        <input type="text" class="form-control input-shadow form-ismat" placeholder="Lugares Disponíveis" id="inputLugaresDisponiveis">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputOrigem" class="form-label">Origem</label>
+                        <input type="text" class="form-control input-shadow form-ismat" placeholder="Origem" id="inputOrigem">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputDestino" class="form-label">Destino</label>
+                        <input type="text" class="form-control input-shadow form-ismat" placeholder="Destino" id="inputDestino">
+                    </div>
+                    <div class="col-6">
+                        <label for="inputAddress" class="form-label">Data</label>
+                        <input type="date" class="form-control input-shadow form-ismat" id="inputAddress" placeholder="00/00/0000">
+                    </div>
+                    <div class="col-6">
+                        <label for="inputAddress2" class="form-label">Hora</label>
+                        <input type="time" class="form-control input-shadow form-ismat" id="inputAddress2" placeholder="00:00">
+                    </div>
+                    <div>
+                        <label for="inputAddress2" class="form-label">Descrição</label>
+                        <textarea class="form-control input-shadow form-ismat" style="height: 180px; resize: none" placeholder="Descrição"></textarea>
+                    </div>
+                    <div class="col-12 d-grid">
+                        <button type="button" class="btn-ismat-large">Criar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
 
 <script src="./js/showMoreButton.js"></script>
 <script src="./js/script.js"></script>
+<script src="./js/destinationButton.js"></script>
 
 </body>
 </html>
