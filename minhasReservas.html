@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+<header class="p-3 mb-4 border-bottom header-nav header-ismat sticky-top">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start navbar navbar-expand-lg">
+      <a href="./index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none pe-4">
+        <img src="images/logo-black.svg" alt="logo" style="height: 32px; width: auto;">
+      </a>
+
+      <button class="navbar-toggler ms-auto"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navBarNav"
+              aria-controls="navBarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navBarNav">
+        <ul class="nav navbar-nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 navbar-ismat">
+          <li class="nav-item">
+            <a class="nav-link-ismat" href="./minhasBoleias.html">Minhas Boleias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-ismat" href="./minhasReservas.html">Minhas Reservas</a>
+          </li>
+        </ul>
+
+        <div class="dropdown">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="./images/icons/user-icon.svg" alt="mdo" class="rounded-circle" width="32" height="32">
+          </a>
+          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="./perfil.html">Ver Perfil</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="col d-flex flex-column justify-content-center align-items-center ">
+    <div class="card flex-column d-flex justify-content-center align-items-center boleia-card-shadow" style="width: 85%;">
+      <div class="card-blocker"></div>
+      <div>
+        <h5>Reservas Ativas</h5>
+      </div>
+
+      <div class="content-wrapper" style="width: 90%">
+        <hr class="hr" />
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body ">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car" style="height: 63px">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent"
+                          aria-expanded="false" aria-controls="#cardContent"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent1"
+                          aria-expanded="false" aria-controls="#cardContent1"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent1">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent2"
+                          aria-expanded="false" aria-controls="#cardContent2"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent2">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent3"
+                          aria-expanded="false" aria-controls="#cardContent3"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent3">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent4"
+                          aria-expanded="false" aria-controls="#cardContent4"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent4">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent5"
+                          aria-expanded="false" aria-controls="#cardContent5"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent5">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent6"
+                          aria-expanded="false" aria-controls="#cardContent6"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent6">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent7"
+                          aria-expanded="false" aria-controls="#cardContent7"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent7">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent8"
+                          aria-expanded="false" aria-controls="#cardContent8"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent8">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 d-flex justify-content-center align-items-center">
+          <button type="button" class="show-more" onclick="showMoreContent(this)">Mostrar mais</button>
+        </div>
+      </div>
+
+
+      <div style="width: 90%"><hr class="hr" /></div>
+      <div class="card-blocker"></div>
+    </div>
+  </div></div>
+<div class="card-blocker"></div>
+<div class="container">
+  <div class="col d-flex flex-column justify-content-center align-items-center ">
+    <div class="card flex-column d-flex justify-content-center align-items-center boleia-card-shadow" style="width: 85%;">
+      <div class="card-blocker"></div>
+      <div>
+        <h5>Histórico de Reservas</h5>
+      </div>
+
+      <div class="content-wrapper" style="width: 90%">
+        <hr class="hr" />
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body ">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car" style="height: 63px">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent"
+                          aria-expanded="false" aria-controls="#cardContent"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent1"
+                          aria-expanded="false" aria-controls="#cardContent1"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent1">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent2"
+                          aria-expanded="false" aria-controls="#cardContent2"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent2">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent3"
+                          aria-expanded="false" aria-controls="#cardContent3"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent3">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent4"
+                          aria-expanded="false" aria-controls="#cardContent4"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent4">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent5"
+                          aria-expanded="false" aria-controls="#cardContent5"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent5">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent6"
+                          aria-expanded="false" aria-controls="#cardContent6"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent6">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent7"
+                          aria-expanded="false" aria-controls="#cardContent7"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent7">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card boleia-card boleia-card-shadow mt-3">
+            <div class="card-body">
+              <div class="d-flex flex-row align-items-center boleia-header">
+                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                <div class="me-auto p-2 ms-5">
+                  Silves - Ismat
+                </div>
+                <div class="ms-auto p-2 me-5">
+                  21/01
+                </div>
+                <div class="p-2 me-5">
+                  14:00
+                </div>
+                <div class="p-2">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent8"
+                          aria-expanded="false" aria-controls="#cardContent8"
+                          onclick="changeExpandIcon(this)">
+                    <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                  </button>
+                </div>
+
+              </div>
+
+
+              <div class="collapse" id="cardContent8">
+                <div class="card-blocker"></div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-responsive text-nowrap">
+                      <table class="text-nowrap w-auto">
+                        <tbody>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Condutor</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Jorge</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                   alt="Profile Image"></td>
+                          <td class="ps-3">Bernardo</td>
+                          <td>
+                            <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
+                                 style="height: 28px;">
+                            <img class="mb-2" src="./images/icons/star.svg" alt="Star"
+                                 style="height: 28px;">
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card ms-5">
+                      <div class="card-header">
+                        Descrição
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo facere in
+                        omnis provident quaerat quidem quos rem repudiandae soluta.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div style="height: 40px"></div>
+                <button type="button" class="btn-ismat-large float-end">Reservar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 d-flex justify-content-center align-items-center">
+          <button type="button" class="show-more" onclick="showMoreContent(this)">Mostrar mais</button>
+        </div>
+      </div>
+
+
+      <div style="width: 90%"><hr class="hr" /></div>
+      <div class="card-blocker"></div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="text-muted">© 2022 Boleias ismat</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-muted" href="#"><i class="fab fa-facebook" style="font-size: 24px"></i></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><i class="fab fa-linkedin" style="font-size: 24px"></i></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><i class="fa fa-globe" style="font-size: 24px"></i></a></li>
+    </ul>
+  </footer>
+</div>
+
+
+
+<script src="./js/showMoreButton.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/destinationButton.js"></script>
+
+</body>
+</html>

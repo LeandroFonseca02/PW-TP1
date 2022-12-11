@@ -72,6 +72,7 @@ function createStarRating(id,number){
         label.htmlFor = input.id;
         let star = document.createElement("i");
         star.classList = "fas fa-star d-inline-block";
+        star.style="height: 28px";
         div.appendChild(input);
         div.appendChild(label)
         label.appendChild(star);
