@@ -79,3 +79,148 @@ function createStarRating(id,number){
     element.appendChild(div);
     element.appendChild(document.createElement("br"));
 }
+
+function createProfileModal(cardId,passengerID,user,parentDiv){
+    let modal = `<div class="modal fade" id="${"profileCard"+cardId+"-"+passengerID}"
+        data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="${"profileCardLabel"+cardId+"-"+passengerID}"
+        aria-hidden="true">
+            <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="${"profileCard"+cardId+"-"+passengerID}">Perfil</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <div class="col d-flex flex-column">
+                              <div class="col mb-3">
+                                  <div class="col d-flex flex-column  align-items-center bg-light perfil-caixa justify-content-center h-100">
+                                      <div class="col d-flex flex-column justify-content-center align-items-center justify-content-center mt-2">
+                                          <div class="mt-2">
+                                              <img src="./images/icons/user-icon.svg" alt="mdo" class="rounded-circle profile-image">
+                                          </div>
+                                      </div>
+                                      <div class="d-flex mb-3">
+                                          <h5>${user.firstName + " " + user.lastName}</h5>
+                                      </div>
+
+                                  </div>
+                              </div>
+
+                              <div class="col mb-3">
+                                  <div class="col d-flex flex-column  align-items-center bg-light perfil-caixa justify-content-center h-100">
+                                      <h5 class="mt-2">Avaliação:</h5>
+                                      <div class="mt-2 mb-2" id="${"profileCardAvaliacao"+cardId+"-"+passengerID}"></div>
+                                  </div>
+                              </div>
+
+                              <div class="col d-flex flex-column bg-light perfil-caixa">
+                                  <div class="mt-2 mb-3 ms-2">
+                                      <h5>Dados Pessoais</h5>
+                                  </div>
+                                  <div class="col d-flex flex-column justify-content-center mb-1">
+                                      <div class="row g-3 ms-1">
+                                          <div class="col-8">
+                                              <label>Endereço de email</label>
+                                              <h5>${user.email}</h5>
+                                          </div>
+                                          <div class="col-4">
+                                              <label>Telemóvel</label>
+                                              <h5>${user.phoneNumber}</h5>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>`;
+
+    parentDiv.innerHTML += modal;
+    let avaliacao = document.getElementById("profileCardAvaliacao"+cardId+"-"+passengerID);
+    starRatingGenerator(avaliacao,user.rating);
+}
+
+function createCard(idCard, data, parentDiv) {
+    let passengers = data.passengers;
+    let card = `
+        <div class="card boleia-card boleia-card-shadow mt-5">
+            <div class="card-body">
+                <div class="d-flex flex-row boleia-header align-items-center gap-4">
+                    <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                    <div>${data.origem} - ${data.destino}</div>
+                    <div class="d-flex col flex-column ms-auto text-center justify-content-between">${data.status}</div>
+                    <div class="me-5">${data.date}</div>
+                    <div>${data.hour}</div>
+                    <div class="p-2">
+                        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target=${"#cardContent" + idCard}
+                                aria-expanded="false" aria-controls=${"#cardContent" + idCard}
+                                onclick="changeExpandIcon(this)">
+                            <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
+                        </button>
+                    </div>
+                </div>
+    
+                <div id=${"modals" + idCard}></div>
+            </div>
+    
+    
+            <div class="collapse" id="${"cardContent" + idCard}">
+                <div class="card-blocker"></div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <div class="table-responsive text-nowrap">
+                            <table class="text-nowrap w-auto">
+                                <tbody>
+                                ${passengers.forEach((user,index) =>
+        `
+                                    <tr>
+                                        <td>
+                                            <a href="" data-bs-toggle="modal" data-bs-target="${"#profileCard"+idCard+"-"+ index}">
+                                                <img className="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                                     alt="Profile Image">
+                                            </a>
+                                        </td>
+                                        <td className="ps-3">${user.firstName}</td>
+                                        <td>
+                                            <div id="${"cardContentAvaliacao"+idCard+index}"></div>
+                                        </td>
+                                    </tr>
+                                `
+    )}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+    
+                    <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                        <div class="card">
+                            <div class="card-header">
+                                Descrição
+                            </div>
+                            <div class="card-body">
+                                <p>Veículo:<br>
+                                    &emsp; Marca: BMW<br>
+                                    &emsp; Modelo: Serie 5<br>
+                                    &emsp; Cor: Cinzento<br>
+                                    &emsp; Matrícula: 12-MH-98<br>
+                                    Preço: 2€</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 px-1">
+                            <p>Lugares Disponíveis: 1</p>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="card-blocker"></div>
+                <div class="d-flex flex-row-reverse">
+                    <button type="button" class="btn-ismat-large">Reservar</button>
+                </div>
+                <div class="card-blocker"></div>
+            </div>
+        </div>`;
+
+    parentDiv.innerHTML += card;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+</head>
+<body>
+
+
+</body>
+
+<script src="./js/script.js"></script>
+<script>
+  let data = [
+    {
+      id: 1,
+      origem: "ISMAT",
+      destino: "Lagoa",
+      date: "10/2",
+      hour: "18:00",
+      status: "Aberta",
+      nrLugaresDisponiveis: 4,
+      pricePerPassenger: "2€",
+      description: "Isto é para ir sempre a abrir!",
+      vehicle: {
+        marca: "BMW",
+        modelo: "Serie 5",
+        cor: "Cinzento",
+        matricula: "12-MH-98"
+      },
+      passengers: [
+        {
+          user_id: "1",
+          email: "a@a.com",
+          firstName: "João",
+          lastName: "João",
+          photo: "none",
+          phoneNumber: "123456789",
+          rating: "3.2"
+        },
+        {
+          user_id: "2",
+          email: "a@a.com",
+          firstName: "Maria",
+          lastName: "João",
+          photo: "none",
+          phoneNumber: "123456789",
+          rating: "4.7"
+        },
+        {
+          user_id: "3",
+          email: "a@a.com",
+          firstName: "Rui",
+          lastName: "João",
+          photo: "none",
+          phoneNumber: "123456789",
+          rating: "1.0"
+        }
+      ]
+    }
+  ]
+
+  let json = JSON.stringify(data)
+  let stringArray = JSON.parse(json)
+
+  createCard(0,stringArray[0], document.querySelector("body"))
+
+
+  stringArray[0].passengers.forEach((a,index) => (console.log(index)))
+  // createProfileModal(0,0,a,document.getElementById("modals"))
+
+
+</script>
+
+</html>
