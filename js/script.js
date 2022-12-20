@@ -240,90 +240,9 @@ function createCard(idCard, data, parentDiv) {
 }
 
 function createProfile(user) {
-    let div = document.querySelector("#perfilContainer");
-    let profile = `
-        <div class="col d-flex flex-column mt-3">
-            <div class="row">
-                <div class="col-3">
-                    <div class="col d-flex flex-column  align-items-center bg-light perfil-caixa justify-content-center h-100">
-                        <div class="d-flex mt-2">
-                                <h5>${user.firstName + " " + user.lastName}</h5>
-                        </div>
-                        <div class="col d-flex flex-column justify-content-center align-items-center justify-content-center">
-                            <div>
-                                <img src="${user.photo}" alt="mdo" class="rounded-circle profile-image">
-                            </div>
-                            <div>
-                                <label class="label-input-file" for="uploadProfilePic">Alterar Foto de Perfil</label>
-                                <input id = "uploadProfilePic" type = "file" accept="image/*"/>
-                            </div>
-                            <div class="mt-2" id="perfil"></div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-9 d-flex flex-column bg-light perfil-caixa">
-                    <div class="mt-2 mb-1">
-                        <h3>Dados Pessoais</h3>
-                    </div>
-                    <div class="col d-flex flex-column justify-content-center">
-                        <div class="row g-3">
-                            <div class="col-6">
-                                <label for="floatingEmail">Endereço de email</label>
-                                <input type="email" class="form-control input-shadow form-ismat" id="floatingEmail" placeholder="Email">
-                            </div>
-                            <div class="col-6">
-                                <label for="floatingInput">Telemóvel</label>
-                                <input type="text" class="form-control input-shadow form-ismat" id="floatingPhoneNumber" placeholder="Telemóvel">
-                            </div>
-                            <div class="col-6">
-                                <label for="floatingInput">Nome</label>
-                                <input type="text" class="form-control input-shadow form-ismat" id="floatingFirstName" placeholder="Nome">
-                            </div>
-                            <div class="col-6">
-                                <label for="floatingInput">Apelido</label>
-                                <input type="text" class="form-control input-shadow form-ismat" id="floatinglastName" placeholder="Apelido">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3 mt-4 mb-3">
-                        <button type="button" class="btn-ismat-large">Guardar</button>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="row">
-                <div class="col-3"><div class="col"></div></div>
-    
-                <div class="col-9 d-flex flex-column bg-light mt-3 perfil-caixa" style="height: 269px">
-                    <div class="mt-2 mb-1">
-                        <h3>Alterar Password</h3>
-                    </div>
-                    <div class="col d-flex flex-column justify-content-center">
-                        <div class="row g-3">
-                            <div class="col-6">
-                                <label for="floatingInput">Password Atual</label>
-                                <input type="password" class="form-control input-shadow form-ismat" id="floatingActualPassword" placeholder="Password Atual">
-                            </div>
-                            <div class="col-6">
-                                <label for="floatingInput">Nova Password</label>
-                                <input type="password" class="form-control input-shadow form-ismat" id="floatingPassword" placeholder="Nova Password">
-                            </div>
-                            <div class="col-6">
-                                <label for="floatingInput">Confirmar Nova Password</label>
-                                <input type="password" class="form-control input-shadow form-ismat" id="floatingConfirmPassword" placeholder="Confirmar Nova Password">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3 mt-4 mb-3">
-                        <button type="button" class="btn-ismat-large">Guardar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-`
-    div.innerHTML = profile;
-    starRatingGenerator(document.getElementById("perfil"),user.rating);
+    document.querySelector("#profileName").innerText = user.firstName + " " + user.lastName;
+    document.querySelector("#profileImage").src = user.photo;
+    starRatingGenerator(document.getElementById("profileRating"),user.rating);
     document.querySelector("#floatingEmail").value = user.email;
     document.querySelector("#floatingPhoneNumber").value = user.phoneNumber;
     document.querySelector("#floatingFirstName").value = user.firstName;

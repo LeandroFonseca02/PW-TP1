@@ -114,17 +114,12 @@
 
   let json = JSON.stringify(data)
   let stringArray = JSON.parse(json)
-  let passengers = stringArray[0].passengers
-  // console.log(passengers)
 
   for (let i = 0; i < stringArray.length; i++) {
     createCard(i,stringArray[i], document.querySelector(".container"))
 
   }
 
-
-  // passengers.forEach((a,index) => (console.log(a)))
-  // createProfileModal(0,0,a,document.getElementById("modals"))
 
 
 </script>
