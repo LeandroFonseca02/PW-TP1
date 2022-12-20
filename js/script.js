@@ -173,22 +173,23 @@ function createCard(idCard, data, parentDiv) {
                         <div class="table-responsive text-nowrap">
                             <table class="text-nowrap w-auto">
                                 <tbody>
-                                ${passengers.forEach((user,index) =>
-        `
+                                ${passengers.map((user,index) =>
+                                    `
                                     <tr>
                                         <td>
                                             <a href="" data-bs-toggle="modal" data-bs-target="${"#profileCard"+idCard+"-"+ index}">
-                                                <img className="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
+                                                <img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
                                                      alt="Profile Image">
                                             </a>
                                         </td>
-                                        <td className="ps-3">${user.firstName}</td>
+                                        <td class="ps-3">${user.firstName}</td>
                                         <td>
-                                            <div id="${"cardContentAvaliacao"+idCard+index}"></div>
+                                            <div class="ms-5" id="${"cardContentAvaliacao"+idCard+index}"></div>
                                         </td>
-                                    </tr>
-                                `
-    )}
+                                        <td>
+                                            <div id="${"cardContentRemove"+idCard+index}"></div>
+                                        </td>
+                                    </tr>`).join('')}
                                 </tbody>
                             </table>
                         </div>
@@ -201,26 +202,37 @@ function createCard(idCard, data, parentDiv) {
                             </div>
                             <div class="card-body">
                                 <p>Veículo:<br>
-                                    &emsp; Marca: BMW<br>
-                                    &emsp; Modelo: Serie 5<br>
-                                    &emsp; Cor: Cinzento<br>
-                                    &emsp; Matrícula: 12-MH-98<br>
-                                    Preço: 2€</p>
+                                    &emsp; Marca: ${data.vehicle.marca}<br>
+                                    &emsp; Modelo: ${data.vehicle.modelo}<br>
+                                    &emsp; Cor: ${data.vehicle.cor}<br>
+                                    &emsp; Matrícula: ${data.vehicle.matricula}<br>
+                                    Preço: ${data.pricePerPassenger}<br>
+                                    ${data.description}
+                                    </p>
                             </div>
                         </div>
                         <div class="mt-3 px-1">
-                            <p>Lugares Disponíveis: 1</p>
+                            <p>Lugares Disponíveis: ${data.nrLugaresDisponiveis - data.passengers.length}</p>
                         </div>
                     </div>
     
                 </div>
                 <div class="card-blocker"></div>
                 <div class="d-flex flex-row-reverse">
-                    <button type="button" class="btn-ismat-large">Reservar</button>
+                    <div class="me-4">
+                        <button type="button" class="btn-ismat-large">Reservar</button>
+                    </div>
                 </div>
                 <div class="card-blocker"></div>
             </div>
         </div>`;
 
     parentDiv.innerHTML += card;
+    let string = "#cardContentAvaliacao" + idCard;
+    let modals = "#modals" + idCard
+    for (let i = 0; i < passengers.length; i++) {
+        let avaliacao = document.querySelector(string+i);
+        starRatingGenerator(avaliacao,passengers[i].rating);
+        createProfileModal(idCard,i,passengers[i],document.querySelector(modals));
+    }
 }
