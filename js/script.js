@@ -149,11 +149,13 @@ function createCard(idCard, data, parentDiv) {
             <div class="card-body">
                 <div class="d-flex flex-row boleia-header align-items-center gap-4">
                     <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
-                    <div>${data.origem} - ${data.destino}</div>
-                    <div class="d-flex col flex-column ms-auto text-center justify-content-between">${data.status}</div>
-                    <div class="me-5">${data.date}</div>
-                    <div>${data.hour}</div>
-                    <div class="p-2">
+                    <div class="col">
+                        <div class="align-self-start">${data.origem} - ${data.destino}</div>                       
+                    </div>
+                    <div class="col">${data.status}</div>
+                    <div class="">${data.date}</div>
+                    <div class=""> ${data.hour}</div>
+                    <div class="">
                         <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target=${"#cardContent" + idCard}
                                 aria-expanded="false" aria-controls=${"#cardContent" + idCard}
                                 onclick="changeExpandIcon(this)">
@@ -174,7 +176,7 @@ function createCard(idCard, data, parentDiv) {
                             <table class="text-nowrap w-auto">
                                 <tbody>
                                 ${passengers.map((user,index) =>
-                                    `
+        `
                                     <tr>
                                         <td>
                                             <a href="" data-bs-toggle="modal" data-bs-target="${"#profileCard"+idCard+"-"+ index}">
