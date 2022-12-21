@@ -58,8 +58,7 @@ function debugStarRating(){
         }
     }
 }
-function createStarRating(id,number){
-    const element = document.getElementById(id);
+function createStarRating(element,number){
     const div = document.createElement("div");
     div.className = "rating-wrapper";
     for (let i = 0; i < 5; i++) {
@@ -261,5 +260,26 @@ function getVehiclesOnSelector(selector, data) {
 function createListOfCards(element,data){
     for (let i = 0; i < data.length; i++) {
         createCard(i,data[i],element);
+    }
+}
+
+function generateRatings(data,parentDiv) {
+    for (let i = 0; i < data.length; i++) {
+        let rating =
+            `<tr>
+              <td>
+                <img class="ms-4 p-2 card-profile-image rounded-circle" src="${data[i].photo}"
+                    alt="Profile Image">
+              </td>
+              <td class="ps-3">${data[i].firstName}</td>
+              <td>
+                <div id="${"rating"+i}">
+                </div>
+              </td>
+              <div id="${"ratingProfileModal"+i}"></div>
+            </tr>`;
+        parentDiv.innerHTML += rating;
+        let id = "#rating" + i;
+        createStarRating(parentDiv.querySelector(id),i);
     }
 }
