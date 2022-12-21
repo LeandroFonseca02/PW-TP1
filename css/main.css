@@ -102,7 +102,7 @@ body{
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
-.active{
+.activePage{
     color: #1a666e !important;
     font-weight: 700;
 
