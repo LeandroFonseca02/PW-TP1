@@ -107,6 +107,40 @@
         </div>
 
         <div class="row">
+            <div class="modal fade" id="criarVeiculo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="criarVeiculoLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="criarVeiculoLabel">Criar Veículo</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#editarVeiculos"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="inputMarca" class="form-label">Marca</label>
+                                    <input type="text" class="form-control input-shadow form-ismat" placeholder="Marca" id="inputMarca">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputModelo" class="form-label">Modelo</label>
+                                    <input type="text" class="form-control input-shadow form-ismat" placeholder="Modelo" id="inputModelo">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputCor" class="form-label">Cor</label>
+                                    <input type="text" class="form-control input-shadow form-ismat" placeholder="Origem" id="inputCor">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputMatricula" class="form-label">Matrícula</label>
+                                    <input type="text" class="form-control input-shadow form-ismat" placeholder="Destino" id="inputMatricula">
+                                </div>
+                                <div class="col-12 d-grid">
+                                    <button type="button" class="btn-ismat-large" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#editarVeiculos">Criar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
             <div class="modal fade" id="editarVeiculos" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editarVeiculosLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -135,7 +169,7 @@
                             </div>
                             <div class="d-flex col mt-4">
                                 <div class="col">
-                                    <button type="button" class="btn-ismat-large">Criar veículo</button>
+                                    <button type="button" class="btn-ismat-large" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#criarVeiculo">Criar veículo</button>
                                 </div>
                                 <div class="d-flex col flex-column">
                                     <button type="button" class="btn-ismat-large align-self-end">Guardar Alterações</button>
