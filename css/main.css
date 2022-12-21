@@ -101,6 +101,12 @@ body{
     text-decoration: none;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
+
+.active{
+    color: #1a666e !important;
+    font-weight: 700;
+
+}
 @media (prefers-reduced-motion: reduce) {
     .nav-link-ismat {
         transition: none;
