@@ -79,15 +79,15 @@ function createStarRating(element,number){
     element.appendChild(document.createElement("br"));
 }
 
-function createProfileModal(cardId,passengerID,user,parentDiv){
-    let modal = `<div class="modal fade" id="${"profileCard"+cardId+"-"+passengerID}"
+function createProfileModal(cardId,passengerID,user,parentDiv,id){
+    let modal = `<div class="modal fade" id="${"profileCard" + id +cardId+"-"+passengerID}"
         data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="${"profileCardLabel"+cardId+"-"+passengerID}"
+        aria-labelledby="${"profileCardLabel" + id +cardId+"-"+passengerID}"
         aria-hidden="true">
             <div class="modal-dialog">
                   <div class="modal-content">
                       <div class="modal-header">
-                          <h5 class="modal-title" id="${"profileCard"+cardId+"-"+passengerID}">Perfil</h5>
+                          <h5 class="modal-title" id="${"profileCardTitle" + id +cardId+"-"+passengerID}">Perfil</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
@@ -109,7 +109,7 @@ function createProfileModal(cardId,passengerID,user,parentDiv){
                               <div class="col mb-3">
                                   <div class="col d-flex flex-column  align-items-center bg-light perfil-caixa justify-content-center h-100">
                                       <h5 class="mt-2">Avaliação:</h5>
-                                      <div class="mt-2 mb-2" id="${"profileCardAvaliacao"+cardId+"-"+passengerID}"></div>
+                                      <div class="mt-2 mb-2" id="${"profileCardAvaliacao" + id +cardId+"-"+passengerID}"></div>
                                   </div>
                               </div>
 
@@ -137,11 +137,11 @@ function createProfileModal(cardId,passengerID,user,parentDiv){
             </div>`;
 
     parentDiv.innerHTML += modal;
-    let avaliacao = document.getElementById("profileCardAvaliacao"+cardId+"-"+passengerID);
+    let avaliacao = document.getElementById("profileCardAvaliacao" + id +cardId+"-"+passengerID);
     starRatingGenerator(avaliacao,user.rating);
 }
 
-function createCard(idCard, data, parentDiv) {
+function createCard(idCard, data, parentDiv, id) {
     let passengers = data.passengers;
     let card = `
         <div class="content">
@@ -156,19 +156,19 @@ function createCard(idCard, data, parentDiv) {
                     <div class="card-header-text">${data.date}</div>
                     <div class="card-header-text"> ${data.hour}</div>
                     <div>
-                        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target=${"#cardContent" + idCard}
-                                aria-expanded="false" aria-controls=${"#cardContent" + idCard}
+                        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target=${"#cardContent" + id + idCard}
+                                aria-expanded="false" aria-controls=${"#cardContent" + id + idCard}
                                 onclick="changeExpandIcon(this)">
                             <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
                         </button>
                     </div>
                 </div>
     
-                <div id=${"modals" + idCard}></div>
+                <div id=${"modals" + id + idCard}></div>
             </div>
     
     
-            <div class="collapse" id="${"cardContent" + idCard}">
+            <div class="collapse" id="${"cardContent" + id + idCard}">
                 <div class="card-blocker"></div>
                 <div class="row">
                     <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -177,19 +177,19 @@ function createCard(idCard, data, parentDiv) {
                                 <tbody>
                                 ${passengers.map((user,index) =>
         `
-                                    <tr id="${"Passenger"+index + "-" + idCard}" class="table-row">
+                                    <tr id="${"Passenger" + id +index + "-" + idCard}" class="table-row">
                                         <td>
-                                            <a href="" data-bs-toggle="modal" data-bs-target="${"#profileCard"+idCard+"-"+ index}">
+                                            <a href="" data-bs-toggle="modal" data-bs-target="${"#profileCard" + id +idCard+"-"+ index}">
                                                 <img class="ms-4 p-2 me-2 rounded-circle card-profile-image" src="${user.photo}"
                                                      alt="Profile Image">
                                             </a>
                                         </td>
                                         <td class="ps-3">${user.firstName}</td>
                                         <td>
-                                            <div class="ms-5" id="${"cardContentAvaliacao"+idCard+index}"></div>
+                                            <div class="ms-3" id="${"cardContentAvaliacao" + id +idCard+index}"></div>
                                         </td>
                                         <td>
-                                            <div id="${"cardContentRemove"+idCard+index}"></div>
+                                            <div id="${"cardContentRemove" + id +idCard+index}"></div>
                                         </td>
                                     </tr>`).join('')}
                                 </tbody>
@@ -221,8 +221,7 @@ function createCard(idCard, data, parentDiv) {
                 </div>
                 <div class="card-blocker"></div>
                 <div class="d-flex flex-row-reverse">
-                    <div class="me-4">
-                        <button type="button" class="btn-ismat-large">Reservar</button>
+                    <div class="me-4" id="${"cardContentButtons" + id  + idCard}">
                     </div>
                 </div>
                 <div class="card-blocker"></div>
@@ -231,13 +230,28 @@ function createCard(idCard, data, parentDiv) {
     </div>`;
 
     parentDiv.innerHTML += card;
-    let string = "#cardContentAvaliacao" + idCard;
-    let modals = "#modals" + idCard
+    let string = "#cardContentAvaliacao" + id  + idCard;
+    let modals = "#modals" + id  + idCard
     for (let i = 0; i < passengers.length; i++) {
         let avaliacao = document.querySelector(string+i);
         starRatingGenerator(avaliacao,passengers[i].rating);
-        createProfileModal(idCard,i,passengers[i],document.querySelector(modals));
+        createProfileModal(idCard,i,passengers[i],document.querySelector(modals),id);
     }
+}
+
+function createCardGenerico(idCard, data, parentDiv, id) {
+    createCard(idCard,data,parentDiv,id);
+    let buttonWrapper = document.getElementById("cardContentButtons"+id+idCard);
+    let reservar = `<button type="button" class="btn-ismat-large">Reservar</button>`;
+    buttonWrapper.innerHTML += reservar;
+}
+
+
+function createCardReservaAtiva(idCard, data, parentDiv,id) {
+    createCard(idCard,data,parentDiv,id);
+    let buttonWrapper = document.getElementById("cardContentButtons"+id+idCard);
+    let cancelar = `<button type="button" class="btn-ismat-large">Cancelar</button>`;
+    buttonWrapper.innerHTML += cancelar;
 }
 
 function createProfile(user) {
@@ -262,12 +276,27 @@ function createListOfCards(element,data,type){
     switch (type) {
         case 0:
             for (let i = 0; i < data.length; i++) {
-                createCard(i,data[i],element);
+                createCardGenerico(i,data[i],element,"Generico");
             }
             break;
         case 1:
             for (let i = 0; i < data.length; i++) {
-                createBoleiaAtiva(i,data[i],element);
+                createBoleiaAtiva(i,data[i],element,"BoleiaAtiva");
+            }
+            break;
+        case 2:
+            for (let i = 0; i < data.length; i++) {
+                createCard(i,data[i],element,"BoleiaHistorico");
+            }
+            break;
+        case 3:
+            for (let i = 0; i < data.length; i++) {
+                createCardReservaAtiva(i,data[i],element,"ReservaAtiva");
+            }
+            break;
+        case 4:
+            for (let i = 0; i < data.length; i++) {
+                createCard(i,data[i],element,"ReservaHistorico");
             }
             break;
     }
@@ -295,17 +324,69 @@ function generateRatings(data,parentDiv) {
     }
 }
 
-function createKickingModal(idCard,passengerID,user,parentDiv) {
+function createConfirmationModal(idCard,data,parentDiv,id) {
     let modal =
-        `<div class="modal fade" id="${"confirmationPassenger"+passengerID+"-"+idCard}"
+        `<div class="modal fade" id="${"confirmationBoleia"+id+idCard}"
             data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="${"confirmationPassengerLabel"+passengerID+"-"+idCard}"
+            aria-labelledby="${"confirmationBoleiaLabel"+id+idCard}"
             aria-hidden="true">
             
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="${"confirmationTitle"+passengerID+"-"+idCard}">Expulsar Passageiro</h5>
+                  <h5 class="modal-title" id="${"confirmationBoleiaTitle"+id+idCard}">Confirmar Boleia</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Tem a certeza que quer confirmar a boleia ${data.origem + "-" + data.destino}?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Sim</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Não</button>
+                </div>
+              </div>
+            </div>
+        </div>`;
+    parentDiv.innerHTML +=modal;
+}
+
+function createCancelModal(idCard,data,parentDiv,id) {
+    let modal =
+        `<div class="modal fade" id="${"cancelBoleia"+id+idCard}"
+            data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="${"cancelBoleiaLabel"+id+idCard}"
+            aria-hidden="true">
+            
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="${"cancelBoleiaTitle"+id+idCard}">Cancelar Boleia</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Tem a certeza que quer cancelar a boleia ${data.origem + "-" + data.destino}?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Sim</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Não</button>
+                </div>
+              </div>
+            </div>
+        </div>`;
+    parentDiv.innerHTML +=modal;
+}
+
+function createKickingModal(idCard,passengerID,user,parentDiv,id) {
+    let modal =
+        `<div class="modal fade" id="${"expulsarPassenger"+id+passengerID+"-"+idCard}"
+            data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="${"expulsarPassengerLabel"+id+passengerID+"-"+idCard}"
+            aria-hidden="true">
+            
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="${"expulsarTitle"+id+passengerID+"-"+idCard}">Expulsar Passageiro</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -321,20 +402,27 @@ function createKickingModal(idCard,passengerID,user,parentDiv) {
     parentDiv.innerHTML +=modal;
 }
 
-function createBoleiaAtiva(idCard, data, parentDiv) {
-    createCard(idCard,data,parentDiv);
-    let card = document.getElementById("cardContent"+idCard);
+function createBoleiaAtiva(idCard, data, parentDiv,id) {
+    createCard(idCard,data,parentDiv,id);
+    let card = document.getElementById("cardContent"+id+idCard);
     let passengers = card.querySelectorAll(".table-row");
 
     for (let i = 1; i < passengers.length; i++) {
         passengers[i].innerHTML += `
         <td>
-            <div id="${"expulsarPassengerModal"+i+"-"+idCard}"></div>
-            <button type="button" class="btn-ismat-close ms-3" data-bs-toggle="modal" data-bs-target="${"#confirmationPassenger"+i+"-"+idCard}">
+            <div id="${"expulsarPassengerModal"+id+i+"-"+idCard}"></div>
+            <button type="button" class="btn-ismat-close ms-3" data-bs-toggle="modal" data-bs-target="${"#expulsarPassenger"+id+i+"-"+idCard}">
                 <i class="fas fa-times-circle" style="font-size: 24px"></i>
             </button>
         </td>`;
-        createKickingModal(idCard,i,data.passengers[i],document.getElementById("expulsarPassengerModal"+i+"-"+idCard));
+        createKickingModal(idCard,i,data.passengers[i],document.getElementById("expulsarPassengerModal"+id+i+"-"+idCard),id);
     }
-
+    let buttonWrapper = document.getElementById("cardContentButtons"+id+idCard);
+    let confirmBtn = `<button type="button" class="btn-ismat-large me-3" data-bs-toggle="modal" data-bs-target="${"#confirmationBoleia"+id+idCard}">Confirmar</button>`;
+    let cancelBtn = `<button type="button" class="btn-ismat-large" data-bs-toggle="modal" data-bs-target="${"#cancelBoleia"+id+idCard}">Cancelar</button>`;
+    buttonWrapper.innerHTML = confirmBtn;
+    buttonWrapper.innerHTML += cancelBtn;
+    createConfirmationModal(idCard,data,buttonWrapper,id);
+    createCancelModal(idCard,data,buttonWrapper,id);
 }
+
