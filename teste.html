@@ -12,114 +12,36 @@
 </head>
 <body>
 
-<div class="container"></div>
+<div class="container">
+  <button type="button" class="btn-ismat-large" data-bs-toggle="modal" data-bs-target="#confirmation">
+    Criar Boleia
+  </button>
+</div>
+<div class="modal fade" id="confirmation"
+data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="confirmation"
+aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="confirmationTitle">Expulsar Passageiro</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <p>Tem a certeza que quer expulsar o Tiago Candeias?</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-success" data-bs-dismiss="modal">Sim</button>
+      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Não</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
 </body>
 
 <script src="./js/script.js"></script>
 <script>
-  let data = [
-    {
-      id: 1,
-      origem: "ISMAT",
-      destino: "Lagoa",
-      date: "10/02",
-      hour: "18:00",
-      status: "Aberta",
-      nrLugaresDisponiveis: 4,
-      pricePerPassenger: "2€",
-      description: "Isto é para ir sempre a abrir!",
-      vehicle: {
-        marca: "BMW",
-        modelo: "Serie 5",
-        cor: "Cinzento",
-        matricula: "12-MH-98"
-      },
-      passengers: [
-        {
-          user_id: "1",
-          email: "a@a.com",
-          firstName: "João",
-          lastName: "João",
-          photo: "./images/profilePictures/a.jpeg",
-          phoneNumber: "123456789",
-          rating: "3.2"
-        },
-        {
-          user_id: "2",
-          email: "a@a.com",
-          firstName: "Maria",
-          lastName: "João",
-          photo: "./images/profilePictures/b.jpeg",
-          phoneNumber: "123456789",
-          rating: "4.7"
-        },
-        {
-          user_id: "3",
-          email: "a@a.com",
-          firstName: "Rui",
-          lastName: "João",
-          photo: "./images/icons/profile-icon.svg",
-          phoneNumber: "123456789",
-          rating: "1.0"
-        }
-      ]
-    },
-    {
-      id: 2,
-      origem: "ISMAT",
-      destino: "Rabinho do Bimbo",
-      date: "07/09",
-      hour: "07:30",
-      status: "Concluida",
-      nrLugaresDisponiveis: 100,
-      pricePerPassenger: "Gratuito",
-      description: "Isto é para ir sempre a abrir!",
-      vehicle: {
-        marca: "Natureza",
-        modelo: "O tronco de um sequoia",
-        cor: "Castanho",
-        matricula: "Nem vais ve la"
-      },
-      passengers: [
-        {
-          user_id: "1",
-          email: "a@a.com",
-          firstName: "Bimbo",
-          lastName: "Bimbo",
-          photo: "./images/icons/profile-icon.svg",
-          phoneNumber: "123456789",
-          rating: "1.7"
-        },
-        {
-          user_id: "2",
-          email: "a@a.com",
-          firstName: "Bimbo",
-          lastName: "Bimbo",
-          photo: "./images/profilePictures/c.jpeg",
-          phoneNumber: "123456789",
-          rating: "1.2"
-        },
-        {
-          user_id: "3",
-          email: "a@a.com",
-          firstName: "Bimbo",
-          lastName: "Bimbo",
-          photo: "./images/profilePictures/d.jpeg",
-          phoneNumber: "123456789",
-          rating: "1.0"
-        }
-      ]
-    }
-  ]
-
-  let json = JSON.stringify(data)
-  let stringArray = JSON.parse(json)
-
-  for (let i = 0; i < stringArray.length; i++) {
-    createCard(i,stringArray[i], document.querySelector(".container"))
-
-  }
-
 
 
 </script>

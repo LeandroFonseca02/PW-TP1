@@ -10,184 +10,65 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 </head>
 <body>
-<div class="container">
-    <div class="card boleia-card boleia-card-shadow mt-5">
-        <div class="card-body">
-            <div class="d-flex flex-row boleia-header align-items-center gap-4">
-                <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
-                <div>Silves - Ismat</div>
-                <div class="d-flex col flex-column ms-auto text-center justify-content-between">Aberta</div>
-                <div class="me-5">21/01</div>
-                <div>14:00</div>
-                <div class="p-2">
-                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardContent"
-                            aria-expanded="false" aria-controls="#cardContent"
-                            onclick="changeExpandIcon(this)">
-                        <img src="./images/icons/icon-down.svg" style="height: 24px" alt="expandir">
-                    </button>
-                </div>
-            </div>
-
-            <!-- Modal Perfil Visitante-->
-            <div class="modal fade" id="staticBackdrop3" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel3" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel3">Perfil</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="col d-flex flex-column">
-                                <div class="col mb-3">
-                                    <div class="col d-flex flex-column  align-items-center bg-light perfil-caixa justify-content-center h-100">
-                                        <div class="col d-flex flex-column justify-content-center align-items-center justify-content-center mt-2">
-                                            <div class="mt-2">
-                                                <img src="./images/icons/user-icon.svg" alt="mdo" class="rounded-circle profile-image">
-                                            </div>
-                                        </div>
-                                        <div class="d-flex mb-3">
-                                            <h5>Nome de Utilizador</h5>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="col mb-3">
-                                    <div class="col d-flex flex-column  align-items-center bg-light perfil-caixa justify-content-center h-100">
-                                        <h5 class="mt-2">Avaliação:</h5>
-                                        <div class="mt-2 mb-2" id="perfil"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col d-flex flex-column bg-light perfil-caixa">
-                                    <div class="mt-2 mb-3 ms-2">
-                                        <h5>Dados Pessoais</h5>
-                                    </div>
-                                    <div class="col d-flex flex-column justify-content-center mb-1">
-                                        <div class="row g-3 ms-1">
-                                            <div class="col-8">
-                                                <label>Endereço de email</label>
-                                                <h5>axxxxxxxx@mso365.ismat.pt</h5>
-                                            </div>
-                                            <div class="col-4">
-                                                <label>Telemóvel</label>
-                                                <h5> 932165487</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="collapse" id="cardContent">
-            <div class="card-blocker"></div>
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                    <div class="table-responsive text-nowrap">
-                        <table class="text-nowrap w-auto">
-                            <tbody>
-                            <tr>
-                                <td>
-                                    <a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
-                                        <img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
-                                             alt="Profile Image">
-                                    </a>
-                                </td>
-                                <td class="ps-3">Condutor</td>
-                                <td>
-                                    <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
-                                         style="height: 28px;">
-                                    <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
-                                         style="height: 28px;">
-                                    <img class="mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
-                                         style="height: 28px;">
-                                    <img class="mb-2" src="./images/icons/star-half.svg" alt="Star Half Filled"
-                                         style="height: 28px;">
-                                    <img class="mb-2" src="./images/icons/star.svg" alt="Star"
-                                         style="height: 28px;">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
-                                         alt="Profile Image"></td>
-                                <td class="ps-3">Jorge</td>
-                                <td>
-                                    <img class="ms-5 mb-2" src="./images/icons/star-fill.svg" alt="Star Filled"
-                                         style="height: 28px;">
-                                    <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
-                                         style="height: 28px;">
-                                    <img class="mb-2" src="./images/icons/star.svg" alt="Star Filled"
-                                         style="height: 28px;">
-                                    <img class="mb-2" src="./images/icons/star.svg" alt="Star Half Filled"
-                                         style="height: 28px;">
-                                    <img class="mb-2" src="./images/icons/star.svg" alt="Star"
-                                         style="height: 28px;">
-                                </td>
-                                <td>
-                                    <button type="button" class="btn-ismat-close">
-                                        <i class="fas fa-times-circle" style="font-size: 24px"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img class="ms-4 p-2 me-2" src="./images/icons/profile-icon.svg"
-                                         alt="Profile Image"></td>
-                                <td class="ps-3">Bernardo</td>
-                                <td>
-                                    <div class="ms-5" id="user-rating"></div>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn-ismat-close">
-                                        <i class="fas fa-times-circle" style="font-size: 24px"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="card-header">
-                            Descrição
-                        </div>
-                        <div class="card-body">
-                            <p>Veículo:<br>
-                                &emsp; Marca: BMW<br>
-                                &emsp; Modelo: Serie 5<br>
-                                &emsp; Cor: Cinzento<br>
-                                &emsp; Matrícula: 12-MH-98<br>
-                                Preço: 2€</p>
-                        </div>
-                    </div>
-                    <div class="mt-3 px-1">
-                        <p>Lugares Disponíveis: 1</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="card-blocker"></div>
-            <div class="d-flex flex-row-reverse">
-                <div class="me-5">
-                    <button type="button" class="btn-ismat-large">Reservar</button>
-                </div>
-            </div>
-            <div class="card-blocker"></div>
-        </div>
-    </div>
+<div class="container content-wrapper" id="a">
 </div>
 
 
-<script src="./js/script.js"></script>
-<script>starRatingGenerator(document.getElementById("user-rating") ,3)</script>
-<script>starRatingGenerator(document.getElementById("perfil"),4.2);</script>
 
+<script src="./js/script.js"></script>
+<script>
+    let data = [
+        {
+            id: 1,
+            origem: "ISMAT",
+            destino: "Lagoa",
+            date: "10/02",
+            hour: "18:00",
+            status: "Aberta",
+            nrLugaresDisponiveis: 4,
+            pricePerPassenger: "2€",
+            description: "Tentem não se atrasar!",
+            vehicle: {
+                marca: "BMW",
+                modelo: "Serie 5",
+                cor: "Cinzento",
+                matricula: "12-MH-98"
+            },
+            passengers: [
+                {
+                    user_id: "1",
+                    email: "joao@email.com",
+                    firstName: "João",
+                    lastName: "Maria",
+                    photo: "./images/profilePictures/a.jpeg",
+                    phoneNumber: "911111111",
+                    rating: "3.2"
+                },
+                {
+                    user_id: "2",
+                    email: "maria@email.com",
+                    firstName: "Maria",
+                    lastName: "João",
+                    photo: "./images/profilePictures/b.jpeg",
+                    phoneNumber: "912222222",
+                    rating: "4.7"
+                },
+                {
+                    user_id: "3",
+                    email: "rui@email.com",
+                    firstName: "Rui",
+                    lastName: "André",
+                    photo: "./images/icons/profile-icon.svg",
+                    phoneNumber: "913333333",
+                    rating: "4.0"
+                }
+            ]
+        }
+    ];
+
+    createBoleiaAtiva(0,data[0],document.getElementById("a"));
+</script>
+<script src="js/showMoreButton.js"></script>
 
 </body>
 </html>
