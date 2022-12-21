@@ -145,7 +145,8 @@ function createProfileModal(cardId,passengerID,user,parentDiv){
 function createCard(idCard, data, parentDiv) {
     let passengers = data.passengers;
     let card = `
-        <div class="card boleia-card boleia-card-shadow mt-5">
+        <div class="content">
+        <div class="card boleia-card boleia-card-shadow mt-3">
             <div class="card-body">
                 <div class="d-flex flex-row boleia-header align-items-center gap-4">
                     <img class="ms-4 d-none d-md-block car-card-image" src="./images/car-placeholder.png" alt="Car">
@@ -227,7 +228,8 @@ function createCard(idCard, data, parentDiv) {
                 </div>
                 <div class="card-blocker"></div>
             </div>
-        </div>`;
+        </div>
+    </div>`;
 
     parentDiv.innerHTML += card;
     let string = "#cardContentAvaliacao" + idCard;
@@ -253,5 +255,11 @@ function createProfile(user) {
 function getVehiclesOnSelector(selector, data) {
     for (let i = 0; i < vehicles.length; i++) {
         selector.innerHTML += `<option value="${i+1}">${data[i].marca + " " + data[i].modelo + " (" + data[i].matricula + ")"}</option>`
+    }
+}
+
+function createListOfCards(element,data){
+    for (let i = 0; i < data.length; i++) {
+        createCard(i,data[i],element);
     }
 }
