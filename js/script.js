@@ -242,16 +242,17 @@ function createCard(idCard, data, parentDiv, id) {
 function createCardGenerico(idCard, data, parentDiv, id) {
     createCard(idCard,data,parentDiv,id);
     let buttonWrapper = document.getElementById("cardContentButtons"+id+idCard);
-    let reservar = `<button type="button" class="btn-ismat-large">Reservar</button>`;
+    let reservar = `<button type="button" class="btn-ismat-large" data-bs-toggle="modal" data-bs-target="${"#reservationBoleia"+id+idCard}">Reservar</button>`;
     buttonWrapper.innerHTML += reservar;
+    createReservationModal(idCard,data,parentDiv,id);
 }
-
 
 function createCardReservaAtiva(idCard, data, parentDiv,id) {
     createCard(idCard,data,parentDiv,id);
     let buttonWrapper = document.getElementById("cardContentButtons"+id+idCard);
-    let cancelar = `<button type="button" class="btn-ismat-large">Cancelar</button>`;
+    let cancelar = `<button type="button" class="btn-ismat-large" data-bs-toggle="modal" data-bs-target="${"#cancelReserva"+id+idCard}">Cancelar</button>`;
     buttonWrapper.innerHTML += cancelar;
+    createCancelReservaModal(idCard,data,buttonWrapper,id);
 }
 
 function createProfile(user) {
@@ -324,6 +325,32 @@ function generateRatings(data,parentDiv) {
     }
 }
 
+function createReservationModal(idCard,data,parentDiv,id) {
+    let modal =
+        `<div class="modal fade" id="${"reservationBoleia"+id+idCard}"
+            data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="${"reservationBoleiaLabel"+id+idCard}"
+            aria-hidden="true">
+            
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="${"reservationBoleiaTitle"+id+idCard}">Reservar Boleia</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Tem a certeza que quer reservar a boleia ${data.origem + "-" + data.destino}?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Sim</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Não</button>
+                </div>
+              </div>
+            </div>
+        </div>`;
+    parentDiv.innerHTML +=modal;
+}
+
 function createConfirmationModal(idCard,data,parentDiv,id) {
     let modal =
         `<div class="modal fade" id="${"confirmationBoleia"+id+idCard}"
@@ -350,7 +377,7 @@ function createConfirmationModal(idCard,data,parentDiv,id) {
     parentDiv.innerHTML +=modal;
 }
 
-function createCancelModal(idCard,data,parentDiv,id) {
+function createCancelBoleiaModal(idCard,data,parentDiv,id) {
     let modal =
         `<div class="modal fade" id="${"cancelBoleia"+id+idCard}"
             data-bs-keyboard="false" tabindex="-1"
@@ -365,6 +392,32 @@ function createCancelModal(idCard,data,parentDiv,id) {
                 </div>
                 <div class="modal-body">
                   <p>Tem a certeza que quer cancelar a boleia ${data.origem + "-" + data.destino}?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Sim</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Não</button>
+                </div>
+              </div>
+            </div>
+        </div>`;
+    parentDiv.innerHTML +=modal;
+}
+
+function createCancelReservaModal(idCard,data,parentDiv,id) {
+    let modal =
+        `<div class="modal fade" id="${"cancelReserva"+id+idCard}"
+            data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="${"cancelReservaLabel"+id+idCard}"
+            aria-hidden="true">
+            
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="${"cancelReservaTitle"+id+idCard}">Cancelar Reserva</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Tem a certeza que quer cancelar a reserva ${data.origem + "-" + data.destino}?</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-success" data-bs-dismiss="modal">Sim</button>
@@ -423,6 +476,6 @@ function createBoleiaAtiva(idCard, data, parentDiv,id) {
     buttonWrapper.innerHTML = confirmBtn;
     buttonWrapper.innerHTML += cancelBtn;
     createConfirmationModal(idCard,data,buttonWrapper,id);
-    createCancelModal(idCard,data,buttonWrapper,id);
+    createCancelBoleiaModal(idCard,data,buttonWrapper,id);
 }
 
