@@ -149,14 +149,14 @@ function createCard(idCard, data, parentDiv) {
         <div class="card boleia-card boleia-card-shadow mt-3">
             <div class="card-body">
                 <div class="d-flex flex-row boleia-header align-items-center gap-4">
-                    <img class="ms-4 d-none d-md-block car-card-image" src="./images/car-placeholder.png" alt="Car">
+                    <img class="ms-4 d-lg-block d-md-none car-card-image" src="./images/car-placeholder.png" alt="Car">
                     <div class="col">
-                        <div class="align-self-start">${data.origem} - ${data.destino}</div>                       
+                        <div class="align-self-start card-header-text">${data.origem} - ${data.destino}</div>                       
                     </div>
-                    <div class="col">${data.status}</div>
-                    <div class="">${data.date}</div>
-                    <div class=""> ${data.hour}</div>
-                    <div class="">
+                    <div class="col card-header-text">${data.status}</div>
+                    <div class="card-header-text">${data.date}</div>
+                    <div class="card-header-text"> ${data.hour}</div>
+                    <div>
                         <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target=${"#cardContent" + idCard}
                                 aria-expanded="false" aria-controls=${"#cardContent" + idCard}
                                 onclick="changeExpandIcon(this)">
@@ -172,7 +172,7 @@ function createCard(idCard, data, parentDiv) {
             <div class="collapse" id="${"cardContent" + idCard}">
                 <div class="card-blocker"></div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="table-responsive text-nowrap">
                             <table class="text-nowrap w-auto">
                                 <tbody>
@@ -198,8 +198,8 @@ function createCard(idCard, data, parentDiv) {
                         </div>
                     </div>
     
-                    <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-                        <div class="card">
+                    <div class="col-xl-5 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="card m-3">
                             <div class="card-header">
                                 Descrição
                             </div>
@@ -214,7 +214,7 @@ function createCard(idCard, data, parentDiv) {
                                     </p>
                             </div>
                         </div>
-                        <div class="mt-3 px-1">
+                        <div class="mt-3 px-1 m-3">
                             <p>Lugares Disponíveis: ${data.nrLugaresDisponiveis - data.passengers.length}</p>
                         </div>
                     </div>
