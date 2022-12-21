@@ -15,7 +15,7 @@ function createStar(div,score){
 }
 
 function getStarScore(rating){
-    var array = [];
+    let array = [];
     let a = rating;
     for (let i = 0; i < 5; i++) {
         if (a>=1){
