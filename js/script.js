@@ -479,3 +479,23 @@ function createBoleiaAtiva(idCard, data, parentDiv,id) {
     createCancelBoleiaModal(idCard,data,buttonWrapper,id);
 }
 
+function createCarsManager(vehicles, element) {
+    for (let i = 0; i < vehicles.length; i++) {
+        let car =
+            `<div class="d-flex align-items-start perfil-caixa bg-light mb-2" id="${"carManager"+i}">
+                <img class="ms-4 d-none d-md-block me-4 align-self-center" src="/images/car-placeholder.png" alt="Car" style="height: 100px">
+                <div>
+                    <div>
+                        <div class="">Matrícula: ${vehicles[i].matricula}</div>
+                        <div class="">Marca: ${vehicles[i].marca}</div>
+                        <div class="">Modelo: ${vehicles[i].modelo}</div>
+                        <div class="">Cor: ${vehicles[i].cor}</div>
+                    </div>
+                </div>
+                <div class="d-flex col flex-column">
+                    <button type="button" class="btn-close align-self-end me-2 mt-1" aria-label="Delete"></button>
+                </div>
+            </div>`;
+        element.innerHTML += car;
+    }
+}

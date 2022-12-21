@@ -137,7 +137,7 @@
 
 <script src="./js/script.js"></script>
 <script>
-    let data = [
+    let ativas = [
         {
             id: 1,
             origem: "ISMAT",
@@ -279,8 +279,150 @@
         }
     ];
 
-    createListOfCards(document.getElementById("boleiasAtivas"),data,1);
-    createListOfCards(document.getElementById("boleiasHistorico"),data,2);
+    let historico = [
+        {
+            id: 1,
+            origem: "ISMAT",
+            destino: "Lagoa",
+            date: "10/02",
+            hour: "18:00",
+            status: "Concluido",
+            nrLugaresDisponiveis: 4,
+            pricePerPassenger: "2€",
+            description: "Tentem não se atrasar!",
+            vehicle: {
+                marca: "BMW",
+                modelo: "Serie 5",
+                cor: "Cinzento",
+                matricula: "12-MH-98"
+            },
+            passengers: [
+                {
+                    user_id: "1",
+                    email: "joao@email.com",
+                    firstName: "João",
+                    lastName: "Maria",
+                    photo: "./images/profilePictures/a.jpeg",
+                    phoneNumber: "911111111",
+                    rating: "3.2"
+                },
+                {
+                    user_id: "2",
+                    email: "maria@email.com",
+                    firstName: "Maria",
+                    lastName: "João",
+                    photo: "./images/profilePictures/b.jpeg",
+                    phoneNumber: "912222222",
+                    rating: "4.7"
+                },
+                {
+                    user_id: "3",
+                    email: "rui@email.com",
+                    firstName: "Rui",
+                    lastName: "André",
+                    photo: "./images/icons/profile-icon.svg",
+                    phoneNumber: "913333333",
+                    rating: "4.0"
+                }
+            ]
+        },
+        {
+            id: 2,
+            origem: "Faro",
+            destino: "ISMAT",
+            date: "07/09",
+            hour: "07:30",
+            status: "Concluido",
+            nrLugaresDisponiveis: 3,
+            pricePerPassenger: "Gratuito",
+            description: "Só espero 15min e depois começo a viagem!",
+            vehicle: {
+                marca: "Peugeot",
+                modelo: "308",
+                cor: "Laranja",
+                matricula: "AB-12-34"
+            },
+            passengers: [
+                {
+                    user_id: "4",
+                    email: "tiago@email.com",
+                    firstName: "Tiago",
+                    lastName: "Costa",
+                    photo: "./images/icons/profile-icon.svg",
+                    phoneNumber: "93111111",
+                    rating: "4.7"
+                }
+            ]
+        },
+        {
+            id: 3,
+            origem: "Monchique",
+            destino: "ISMAT",
+            date: "17/03",
+            hour: "14:10",
+            status: "Cancelado",
+            nrLugaresDisponiveis: 3,
+            pricePerPassenger: "3,5€",
+            description: "Eu levo medronho!",
+            vehicle: {
+                marca: "Peugeot",
+                modelo: "308",
+                cor: "Laranja",
+                matricula: "AB-12-34"
+            },
+            passengers: [
+                {
+                    user_id: "5",
+                    email: "antonio@email.com",
+                    firstName: "Antonio",
+                    lastName: "Pedro",
+                    photo: "./images/icons/profile-icon.svg",
+                    phoneNumber: "932222222",
+                    rating: "3.2"
+                },
+                {
+                    user_id: "6",
+                    email: "filipe@email.com",
+                    firstName: "Filipe",
+                    lastName: "Fagundes",
+                    photo: "./images/profilePictures/a.jpeg",
+                    phoneNumber: "933333333",
+                    rating: "2.9"
+                }
+            ]
+        },
+        {
+            id: 4,
+            origem: "Monchique",
+            destino: "ISMAT",
+            date: "17/03",
+            hour: "14:10",
+            status: "Concluido",
+            nrLugaresDisponiveis: 2,
+            pricePerPassenger: "Uma boa companhia",
+            description: "Só espero 15min e depois começo a viagem!",
+            vehicle: {
+                marca: "Renault",
+                modelo: "Clio",
+                cor: "Preto",
+                matricula: "03-72-KR"
+            },
+            passengers: [
+                {
+                    user_id: "7",
+                    email: "sofia@email.com",
+                    firstName: "Sofia",
+                    lastName: "Silva",
+                    photo: "./images/icons/profile-icon.svg",
+                    phoneNumber: "96111111",
+                    rating: "4.2"
+                }
+            ]
+        }
+    ];
+
+    createListOfCards(document.getElementById("boleiasAtivas"),ativas,1);
+    createListOfCards(document.getElementById("boleiasHistorico"),historico,2);
 </script>
 <script src="./js/showMoreButton.js"></script>
 <script src="./js/destinationButton.js"></script>

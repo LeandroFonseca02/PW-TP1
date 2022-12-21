@@ -150,21 +150,7 @@
                         </div>
                         <div class="modal-body">
                             <div class="col">
-                                <div class="bg-light perfil-caixa h-100">
-                                    <div class="d-flex align-items-start">
-                                        <img class="ms-4 d-none d-md-block me-4 align-self-center" src="./images/car-placeholder.png" alt="Car" style="height: 100px">
-                                        <div>
-                                            <div>
-                                                <div class="">Matrícula: 12-MH-45</div>
-                                                <div class="">Marca: BMW</div>
-                                                <div class="">Modelo: Serie 5</div>
-                                                <div class="">Cor: Vermelho</div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex col flex-column">
-                                            <button type="button" class="btn-close align-self-end me-2 mt-1" aria-label="Delete"></button>
-                                        </div>
-                                    </div>
+                                <div class="h-100" id="carManagerWrapper">
                                 </div>
                             </div>
                             <div class="d-flex col mt-4">
@@ -247,7 +233,30 @@
             rating: "4.7"
         }
     ]
-    createProfile(data[0])
+
+    let vehicles = [
+        {
+            marca: "Peugeot",
+            modelo: "106",
+            cor: "Branco",
+            matricula: "AL-52-98"
+        },
+        {
+            marca: "Audi",
+            modelo: "R8",
+            cor: "Vermelho",
+            matricula: "83-OK-39"
+        },
+        {
+            marca: "Renault",
+            modelo: "Clio",
+            cor: "Preto",
+            matricula: "03-72-KR"
+        }
+    ];
+
+    createProfile(data[0]);
+    createCarsManager(vehicles,document.getElementById("carManagerWrapper"));
 </script>
 
 
