@@ -148,7 +148,7 @@ function createCard(idCard, data, parentDiv) {
         <div class="card boleia-card boleia-card-shadow mt-5">
             <div class="card-body">
                 <div class="d-flex flex-row boleia-header align-items-center gap-4">
-                    <img class="ms-4 d-none d-md-block" src="./images/car-placeholder.png" alt="Car">
+                    <img class="ms-4 d-none d-md-block car-card-image" src="./images/car-placeholder.png" alt="Car">
                     <div class="col">
                         <div class="align-self-start">${data.origem} - ${data.destino}</div>                       
                     </div>
@@ -248,4 +248,10 @@ function createProfile(user) {
     document.querySelector("#floatingFirstName").value = user.firstName;
     document.querySelector("#floatinglastName").value = user.lastName;
     document.querySelector("#headerProfile").src = user.photo;
+}
+
+function getVehiclesOnSelector(selector, data) {
+    for (let i = 0; i < vehicles.length; i++) {
+        selector.innerHTML += `<option value="${i+1}">${data[i].marca + " " + data[i].modelo + " (" + data[i].matricula + ")"}</option>`
+    }
 }

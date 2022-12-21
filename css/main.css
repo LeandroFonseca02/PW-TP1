@@ -239,6 +239,10 @@ body{
     z-index: 1;
 }
 
+.car-card-image{
+    height: 63px;
+}
+
 .condutor-icon{
     position: relative;
     top: 23px;

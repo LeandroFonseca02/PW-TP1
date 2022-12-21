@@ -1173,9 +1173,9 @@
                         <label for="inputVeiculo" class="form-label">Veículo</label>
                         <select class="form-select input-shadow form-ismat" aria-label="Veículo" id="inputVeiculo">
                             <option selected hidden>Veículo</option>
-                            <option value="1">Mercedes</option>
-                            <option value="2">Audi</option>
-                            <option value="3">BMW</option>
+<!--                            <option value="1">Mercedes</option>-->
+<!--                            <option value="2">Audi</option>-->
+<!--                            <option value="3">BMW</option>-->
                         </select>
                     </div>
                     <div class="col-md-6">
@@ -1270,7 +1270,30 @@
 <script src="./js/showMoreButton.js"></script>
 <script src="./js/script.js"></script>
 <script src="./js/destinationButton.js"></script>
-<script>starRatingGenerator(document.getElementById("perfil"),4.2);</script>
+<script>
+    let vehicles = [
+        {
+            marca: "Peugeot",
+            modelo: "106",
+            cor: "Branco",
+            matricula: "AL-52-98"
+        },
+        {
+            marca: "Audi",
+            modelo: "R8",
+            cor: "Vermelho",
+            matricula: "83-OK-39"
+        },
+        {
+            marca: "Renault",
+            modelo: "Clio",
+            cor: "Preto",
+            matricula: "03-72-KR"
+        }
+    ];
+
+    getVehiclesOnSelector(document.getElementById("inputVeiculo"),vehicles);
+    starRatingGenerator(document.getElementById("perfil"),4.2);</script>
 
 </body>
 </html>
