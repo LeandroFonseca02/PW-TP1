@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Avaliação</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+
+<button type="button" class="btn-ismat-large" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
+  Avaliar
+</button>
+
+<div class="modal fade" id="staticBackdrop4" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel4" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel4">Avaliação</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="#" method="post">
+          <table class="text-nowrap w-auto">
+            <tbody id="ratings">
+
+            </tbody>
+          </table>
+          <div class="me-4 mt-3 mb-2 d-flex flex-row-reverse">
+            <button type="button" class="btn-ismat-large" onclick="debugStarRating()"> Avaliar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./js/script.js"></script>
+<script>
+  let data = [
+    {
+      user_id: "1",
+      email: "joao@email.com",
+      firstName: "João",
+      lastName: "Maria",
+      photo: "./images/profilePictures/a.jpeg",
+      phoneNumber: "911111111",
+      rating: "3.2"
+    },
+    {
+      user_id: "2",
+      email: "maria@email.com",
+      firstName: "Maria",
+      lastName: "João",
+      photo: "./images/profilePictures/b.jpeg",
+      phoneNumber: "912222222",
+      rating: "4.7"
+    },
+    {
+      user_id: "3",
+      email: "rui@email.com",
+      firstName: "Rui",
+      lastName: "André",
+      photo: "./images/icons/profile-icon.svg",
+      phoneNumber: "913333333",
+      rating: "4.0"
+    }
+  ]
+  generateRatings(data,document.getElementById("ratings"));
+</script>
+
+</body>
+</html>
